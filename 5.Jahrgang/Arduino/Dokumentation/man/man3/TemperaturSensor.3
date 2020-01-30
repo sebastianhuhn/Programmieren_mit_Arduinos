@@ -1,0 +1,60 @@
+.TH "TemperaturSensor" 3 "Fre Aug 4 2017" "WFO: Arduino Informatik-Schulprojekt" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TemperaturSensor \- Diese Klasse ermöglicht die Verwendung des Temperatursensors\&. Wichtig hierbei ist, dass Pin-1 mit Masse (GND), Pin-2 mit Analogeingang (A0-A5) und Pin-3 mit Versorgungsspannung (+5V) verbunden sind\&. ( Plane Schnittfläche des Halbkreis zeigt nach unten: Pin-1 rechts, Pin-2 mittig, Pin-3 links !)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TemperaturSensor\&.h>\fP
+.SS "Öffentliche Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBTemperaturSensor\fP (unsigned pin)"
+.br
+.ti -1c
+.RI "float \fBmissTemperatur\fP ()"
+.br
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+Diese Klasse ermöglicht die Verwendung des Temperatursensors\&. Wichtig hierbei ist, dass Pin-1 mit Masse (GND), Pin-2 mit Analogeingang (A0-A5) und Pin-3 mit Versorgungsspannung (+5V) verbunden sind\&. ( Plane Schnittfläche des Halbkreis zeigt nach unten: Pin-1 rechts, Pin-2 mittig, Pin-3 links !) 
+.SH "Beschreibung der Konstruktoren und Destruktoren"
+.PP 
+.SS "TemperaturSensor::TemperaturSensor (unsigned pin)\fC [inline]\fP, \fC [explicit]\fP"
+Konstruktor
+.PP
+Erstellt ein Objekt, welches die Verwendung des Temperatursensors ermöglicht\&. Hierbei muss der verwendete Pin angegeben werden, wobei nur die analogen Pins A0 bis A5 verwendet werden können\&. 
+.PP
+\fBParameter:\fP
+.RS 4
+\fIpin\fP Verwendete Pin-Nummer Beispiel: 
+.PP
+.nf
+ y
+TemperaturSensor sensor( 5 );
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "float TemperaturSensor::missTemperatur ()\fC [inline]\fP"
+Ermittelt die aktuelle Temperatur in °C\&. Hierbei muss der Datentyp 'float' einer Nicht-Ganzzahl (!) verwendet werden\&. Beispiel: 
+.PP
+.nf
+float temperatur = sensor\&.missTemperatur(); 
+
+.fi
+.PP
+ 
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für WFO: Arduino Informatik-Schulprojekt aus dem Quellcode\&.

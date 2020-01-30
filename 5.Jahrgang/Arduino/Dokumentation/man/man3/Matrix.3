@@ -1,0 +1,177 @@
+.TH "Matrix" 3 "Fre Aug 4 2017" "WFO: Arduino Informatik-Schulprojekt" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Matrix \- Diese Klasse ermöglicht die Verwendung der 8x8 LED-Matrix\&. Diese \fBMatrix\fP besteht auch 8 Zeilen (rows R1\&.\&.\&.R8) und 8 Spalten (columns C1\&.\&.\&.C8)\&. Hierbei agieren die Zeilen als Anode (inaktiv bei LOW), die Spalten als Kathode (inaktiv bei HIGH)\&. Wichtig hierbei ist, dass ein 1K Ohm Widerstand in Reihe bei JEDER Kathode (C1\&.\&.\&.C8) zu schalten ist\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Matrix\&.h>\fP
+.SS "Öffentliche Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBMatrix\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitialisiere\fP (int zeilen[], int spalten[])"
+.br
+.ti -1c
+.RI "void \fBeinschalten\fP (unsigned zeile, unsigned spalte)"
+.br
+.ti -1c
+.RI "void \fBausschalten\fP (unsigned zeile, unsigned spalte)"
+.br
+.ti -1c
+.RI "void \fBtest\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetzeZustand\fP (bool zustand[][8])"
+.br
+.ti -1c
+.RI "void \fBanzeigen\fP (unsigned dauer=500)"
+.br
+.ti -1c
+.RI "void \fBloescheAlles\fP ()"
+.br
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+Diese Klasse ermöglicht die Verwendung der 8x8 LED-Matrix\&. Diese \fBMatrix\fP besteht auch 8 Zeilen (rows R1\&.\&.\&.R8) und 8 Spalten (columns C1\&.\&.\&.C8)\&. Hierbei agieren die Zeilen als Anode (inaktiv bei LOW), die Spalten als Kathode (inaktiv bei HIGH)\&. Wichtig hierbei ist, dass ein 1K Ohm Widerstand in Reihe bei JEDER Kathode (C1\&.\&.\&.C8) zu schalten ist\&. 
+.SH "Beschreibung der Konstruktoren und Destruktoren"
+.PP 
+.SS "Matrix::Matrix ()\fC [inline]\fP, \fC [explicit]\fP"
+Konstruktor
+.PP
+Erstellt ein Objekt, welches die Ansteuerung der \fBMatrix\fP ermöglicht\&. Beispiel: 
+.PP
+.nf
+Matrix matrix(  );
+
+.fi
+.PP
+ 
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "void Matrix::anzeigen (unsigned dauer = \fC500\fP)\fC [inline]\fP"
+Setzt den aktuell gespeicherten Zustand aller LEDs\&. 
+.PP
+\fBParameter:\fP
+.RS 4
+\fIdauer\fP Anzeigedauer (in cs) Beispiel: 
+.PP
+.nf
+matrix\&.anzeigen( 500 );
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SS "void Matrix::ausschalten (unsigned zeile, unsigned spalte)\fC [inline]\fP"
+Schaltet die jeweilige \fBLED\fP der \fBMatrix\fP aus\&. 
+.PP
+\fBParameter:\fP
+.RS 4
+\fIzeile\fP Auszuschaltende Zeilennummer (1\&.\&.\&.8) 
+.br
+\fIspalte\fP Auszuschaltende Spaltennummer (1\&.\&.\&.8) Beispiel: 
+.PP
+.nf
+matrix\&.ausschalten( 5, 6 );
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SS "void Matrix::einschalten (unsigned zeile, unsigned spalte)\fC [inline]\fP"
+Schaltet die jeweilige \fBLED\fP der \fBMatrix\fP ein\&. 
+.PP
+\fBParameter:\fP
+.RS 4
+\fIzeile\fP Einzuschaltende Zeilennummer (1\&.\&.\&.8) 
+.br
+\fIspalte\fP Einzuschaltende Spaltennummer (1\&.\&.\&.8) Beispiel: 
+.PP
+.nf
+matrix\&.einschalten( 5, 6);
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SS "void Matrix::initialisiere (int zeilen[], int spalten[])\fC [inline]\fP"
+Initialisiert die LED-Matrix\&. 
+.PP
+\fBParameter:\fP
+.RS 4
+\fIzeilen[]\fP Array der Pins für die Zeilen (R1, R2, R3, R4, R5, R6, R7, R8) 
+.br
+\fIspalten[]\fP Array der Pins für die Spalten (R1, R2, R3, R4, R5, R6, R7, R8) Beispiel: 
+.PP
+.nf
+int zeilen[] = {9, A1, 8, 12, 1, 7, 2, 5 };         // R1\&.\&.\&.R8
+int spalten[] = {A0, 3, 4, 10, 6, 11, A2, A3};  // C1\&.\&.\&.C8
+matrix\&.initialisiere(zeilen, spalten);
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SS "void Matrix::loescheAlles ()\fC [inline]\fP"
+Schaltet alle LEDs auf der \fBMatrix\fP aus\&. Beispiel: 
+.PP
+.nf
+matrix\&.loescheAlles();
+
+.fi
+.PP
+ 
+.SS "void Matrix::setzeZustand (bool zustand[][8])\fC [inline]\fP"
+Setzt den Zustand aller LEDs der \fBMatrix\fP\&. 
+.PP
+\fBParameter:\fP
+.RS 4
+\fIzustand[][]\fP 2D Array mit 0/1 Werten der jeweiligen \fBLED\fP Beispiel: 
+.PP
+.nf
+bool zustand[8][8] = { 
+{0, 0, 1, 1, 1, 1, 0, 0 }
+,{0, 0, 0, 1, 1, 0, 0, 0 }
+,{0, 0, 0, 1, 1, 0, 0, 0 }
+,{0, 0, 0, 1, 1, 0, 0, 0 }
+,{0, 0, 0, 1, 1, 0, 0, 0 }
+,{0, 0, 0, 1, 1, 0, 0, 0 }
+,{0, 0, 0, 1, 1, 0, 0, 0 }
+,{0, 0, 1, 1, 1, 1, 0, 0 }  
+};
+matrix\&.setzeZustand( zustand );
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SS "void Matrix::test ()\fC [inline]\fP"
+Schaltet alle LEDs auf der \fBMatrix\fP ein\&. Beispiel: 
+.PP
+.nf
+matrix\&.test();
+
+.fi
+.PP
+ 
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für WFO: Arduino Informatik-Schulprojekt aus dem Quellcode\&.

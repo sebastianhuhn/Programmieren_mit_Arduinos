@@ -1,0 +1,74 @@
+\hypertarget{classHelligkeitsSensor}{}\section{Helligkeits\+Sensor Klassenreferenz}
+\label{classHelligkeitsSensor}\index{Helligkeits\+Sensor@{Helligkeits\+Sensor}}
+
+
+Diese Klasse ermöglicht die Verwendung des Helligkeitssensors. Wichtig hierbei ist, dass ein Pin A \char`\"{}+\char`\"{} mit Versorgungsspannung (+5V) und der andere Pin B mit einem Analogeingang (A0-\/\+A5) verbunden sind. Zusätzlich muss Pin B mit einem 10K Ohm Widerstand mit Masse (-\/) verbunden sein.  
+
+
+
+
+{\ttfamily \#include $<$Helligkeits\+Sensor.\+h$>$}
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHelligkeitsSensor_a4154c5c9a77f4035b94602252f573f41}{Helligkeits\+Sensor} (unsigned pin)
+\item 
+int \hyperlink{classHelligkeitsSensor_adabf39eb12ed5b5be57c8d3a382cf99b}{miss\+Helligkeit\+Raw} ()
+\item 
+float \hyperlink{classHelligkeitsSensor_ad69b97f09e9b4ff9597ede2670c08f2c}{miss\+Helligkeit} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+Diese Klasse ermöglicht die Verwendung des Helligkeitssensors. Wichtig hierbei ist, dass ein Pin A \char`\"{}+\char`\"{} mit Versorgungsspannung (+5V) und der andere Pin B mit einem Analogeingang (A0-\/\+A5) verbunden sind. Zusätzlich muss Pin B mit einem 10K Ohm Widerstand mit Masse (-\/) verbunden sein. 
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\index{Helligkeits\+Sensor@{Helligkeits\+Sensor}!Helligkeits\+Sensor@{Helligkeits\+Sensor}}
+\index{Helligkeits\+Sensor@{Helligkeits\+Sensor}!Helligkeits\+Sensor@{Helligkeits\+Sensor}}
+\subsubsection[{\texorpdfstring{Helligkeits\+Sensor(unsigned pin)}{HelligkeitsSensor(unsigned pin)}}]{\setlength{\rightskip}{0pt plus 5cm}Helligkeits\+Sensor\+::\+Helligkeits\+Sensor (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{pin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classHelligkeitsSensor_a4154c5c9a77f4035b94602252f573f41}{}\label{classHelligkeitsSensor_a4154c5c9a77f4035b94602252f573f41}
+Konstruktor
+
+Erstellt ein Objekt, welches die Verwendung des Helligkeitssensor ermöglicht. Hierbei muss der verwendete Pin angegeben werden, wobei nur die analogen Pins A0 bis A5 verwendet werden können. 
+\begin{DoxyParams}{Parameter}
+{\em pin} & Verwendete Pin-\/\+Nummer Beispiel\+: 
+\begin{DoxyCode}
+\hyperlink{classHelligkeitsSensor}{HelligkeitsSensor} sensor( A3 );
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\index{Helligkeits\+Sensor@{Helligkeits\+Sensor}!miss\+Helligkeit@{miss\+Helligkeit}}
+\index{miss\+Helligkeit@{miss\+Helligkeit}!Helligkeits\+Sensor@{Helligkeits\+Sensor}}
+\subsubsection[{\texorpdfstring{miss\+Helligkeit()}{missHelligkeit()}}]{\setlength{\rightskip}{0pt plus 5cm}float Helligkeits\+Sensor\+::miss\+Helligkeit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classHelligkeitsSensor_ad69b97f09e9b4ff9597ede2670c08f2c}{}\label{classHelligkeitsSensor_ad69b97f09e9b4ff9597ede2670c08f2c}
+Ermittelt die aktuelle Helligkeit in dunkel -\/ entspricht 0-\/ und hell -\/entspricht 100-\/ an. Beispiel\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} helligkeit = sensor.missHelligkeit(); 
+\end{DoxyCode}
+ \index{Helligkeits\+Sensor@{Helligkeits\+Sensor}!miss\+Helligkeit\+Raw@{miss\+Helligkeit\+Raw}}
+\index{miss\+Helligkeit\+Raw@{miss\+Helligkeit\+Raw}!Helligkeits\+Sensor@{Helligkeits\+Sensor}}
+\subsubsection[{\texorpdfstring{miss\+Helligkeit\+Raw()}{missHelligkeitRaw()}}]{\setlength{\rightskip}{0pt plus 5cm}int Helligkeits\+Sensor\+::miss\+Helligkeit\+Raw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classHelligkeitsSensor_adabf39eb12ed5b5be57c8d3a382cf99b}{}\label{classHelligkeitsSensor_adabf39eb12ed5b5be57c8d3a382cf99b}
+Ermittelt die aktuelle Helligkeit als analogen Wert. Hinweis\+: Analoge Messwerte 0 bis 1023 Beispiel\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} helligkeit = sensor.missHelligkeitRaw(); 
+\end{DoxyCode}
+ 
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+helligkeitssensor/Helligkeits\+Sensor.\+h\end{DoxyCompactItemize}

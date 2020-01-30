@@ -1,0 +1,74 @@
+\hypertarget{classFuellstandsSensor}{}\section{Fuellstands\+Sensor Klassenreferenz}
+\label{classFuellstandsSensor}\index{Fuellstands\+Sensor@{Fuellstands\+Sensor}}
+
+
+Diese Klasse ermöglicht die Verwendung des Füllstandssensors. Wichtig hierbei ist, dass Pin \char`\"{}-\/\char`\"{} mit Masse (G\+ND), Pin \char`\"{}+\char`\"{} mit Versorgungsspannung (+5V) und Pin \char`\"{}\+S\char`\"{} mit Analogeingang (A0-\/\+A5) verbunden sind.  
+
+
+
+
+{\ttfamily \#include $<$Fuellstands\+Sensor.\+h$>$}
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFuellstandsSensor_a6e4f4b01af851dae63663fa5b7cd031a}{Fuellstands\+Sensor} (unsigned pin)
+\item 
+int \hyperlink{classFuellstandsSensor_a925796a3eb96dd4ee9b3a61d87afe70d}{miss\+Fuellstand\+Raw} ()
+\item 
+float \hyperlink{classFuellstandsSensor_af7cc4b786c2d151bfc8aaef5f30df77a}{miss\+Fuellstand} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+Diese Klasse ermöglicht die Verwendung des Füllstandssensors. Wichtig hierbei ist, dass Pin \char`\"{}-\/\char`\"{} mit Masse (G\+ND), Pin \char`\"{}+\char`\"{} mit Versorgungsspannung (+5V) und Pin \char`\"{}\+S\char`\"{} mit Analogeingang (A0-\/\+A5) verbunden sind. 
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\index{Fuellstands\+Sensor@{Fuellstands\+Sensor}!Fuellstands\+Sensor@{Fuellstands\+Sensor}}
+\index{Fuellstands\+Sensor@{Fuellstands\+Sensor}!Fuellstands\+Sensor@{Fuellstands\+Sensor}}
+\subsubsection[{\texorpdfstring{Fuellstands\+Sensor(unsigned pin)}{FuellstandsSensor(unsigned pin)}}]{\setlength{\rightskip}{0pt plus 5cm}Fuellstands\+Sensor\+::\+Fuellstands\+Sensor (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{pin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classFuellstandsSensor_a6e4f4b01af851dae63663fa5b7cd031a}{}\label{classFuellstandsSensor_a6e4f4b01af851dae63663fa5b7cd031a}
+Konstruktor
+
+Erstellt ein Objekt, welches die Verwendung des Füllstandssensors ermöglicht.. Hierbei muss der verwendete Pin angegeben werden, wobei nur die analogen Pins A0 bis A5 verwendet werden können. 
+\begin{DoxyParams}{Parameter}
+{\em pin} & Verwendete Pin-\/\+Nummer Beispiel\+: 
+\begin{DoxyCode}
+\hyperlink{classFuellstandsSensor}{FuellstandsSensor} sensor( 5 );
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\index{Fuellstands\+Sensor@{Fuellstands\+Sensor}!miss\+Fuellstand@{miss\+Fuellstand}}
+\index{miss\+Fuellstand@{miss\+Fuellstand}!Fuellstands\+Sensor@{Fuellstands\+Sensor}}
+\subsubsection[{\texorpdfstring{miss\+Fuellstand()}{missFuellstand()}}]{\setlength{\rightskip}{0pt plus 5cm}float Fuellstands\+Sensor\+::miss\+Fuellstand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFuellstandsSensor_af7cc4b786c2d151bfc8aaef5f30df77a}{}\label{classFuellstandsSensor_af7cc4b786c2d151bfc8aaef5f30df77a}
+Ermittelt den aktuellen Füllstand in Prozent. Beispiel\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} temperatur = sensor.missFuellstand(); 
+\end{DoxyCode}
+ \index{Fuellstands\+Sensor@{Fuellstands\+Sensor}!miss\+Fuellstand\+Raw@{miss\+Fuellstand\+Raw}}
+\index{miss\+Fuellstand\+Raw@{miss\+Fuellstand\+Raw}!Fuellstands\+Sensor@{Fuellstands\+Sensor}}
+\subsubsection[{\texorpdfstring{miss\+Fuellstand\+Raw()}{missFuellstandRaw()}}]{\setlength{\rightskip}{0pt plus 5cm}int Fuellstands\+Sensor\+::miss\+Fuellstand\+Raw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFuellstandsSensor_a925796a3eb96dd4ee9b3a61d87afe70d}{}\label{classFuellstandsSensor_a925796a3eb96dd4ee9b3a61d87afe70d}
+Ermittelt den aktuellen Füllstand als analogen Wert. Hinweis\+: Analoge Messwerte 1 160 25 250 50 260 75 270 100 300 Beispiel\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} temperatur = sensor.missFuellstandRaw(); 
+\end{DoxyCode}
+ 
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+fuellstandssensor/Fuellstands\+Sensor.\+h\end{DoxyCompactItemize}

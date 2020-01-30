@@ -1,0 +1,180 @@
+\hypertarget{classMatrix}{}\section{Matrix Klassenreferenz}
+\label{classMatrix}\index{Matrix@{Matrix}}
+
+
+Diese Klasse ermöglicht die Verwendung der 8x8 L\+E\+D-\/\+Matrix. Diese \hyperlink{classMatrix}{Matrix} besteht auch 8 Zeilen (rows R1...R8) und 8 Spalten (columns C1...C8). Hierbei agieren die Zeilen als Anode (inaktiv bei L\+OW), die Spalten als Kathode (inaktiv bei H\+I\+GH). Wichtig hierbei ist, dass ein 1K Ohm Widerstand in Reihe bei J\+E\+D\+ER Kathode (C1...C8) zu schalten ist.  
+
+
+
+
+{\ttfamily \#include $<$Matrix.\+h$>$}
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMatrix_a2dba13c45127354c9f75ef576f49269b}{Matrix} ()
+\item 
+void \hyperlink{classMatrix_ab0eb0c710ec849cf46ac44dbc80a60a0}{initialisiere} (int zeilen\mbox{[}$\,$\mbox{]}, int spalten\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{classMatrix_abea6c950e05056f76264b3ee4c6c0474}{einschalten} (unsigned zeile, unsigned spalte)
+\item 
+void \hyperlink{classMatrix_a83a04c1348df17c2710baae633975a3f}{ausschalten} (unsigned zeile, unsigned spalte)
+\item 
+void \hyperlink{classMatrix_a607d16d3c8242dcbb5db75b5872e5561}{test} ()
+\item 
+void \hyperlink{classMatrix_ac4ae600939342ca37a68aaa62bc7a22c}{setze\+Zustand} (bool zustand\mbox{[}$\,$\mbox{]}\mbox{[}8\mbox{]})
+\item 
+void \hyperlink{classMatrix_a027d9ff5514e47bb49b2df69fb5c8bd9}{anzeigen} (unsigned dauer=500)
+\item 
+void \hyperlink{classMatrix_adb92ec745c6a8d3e3db45f29b6605b34}{loesche\+Alles} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+Diese Klasse ermöglicht die Verwendung der 8x8 L\+E\+D-\/\+Matrix. Diese \hyperlink{classMatrix}{Matrix} besteht auch 8 Zeilen (rows R1...R8) und 8 Spalten (columns C1...C8). Hierbei agieren die Zeilen als Anode (inaktiv bei L\+OW), die Spalten als Kathode (inaktiv bei H\+I\+GH). Wichtig hierbei ist, dass ein 1K Ohm Widerstand in Reihe bei J\+E\+D\+ER Kathode (C1...C8) zu schalten ist. 
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{Matrix()}{Matrix()}}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+::\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classMatrix_a2dba13c45127354c9f75ef576f49269b}{}\label{classMatrix_a2dba13c45127354c9f75ef576f49269b}
+Konstruktor
+
+Erstellt ein Objekt, welches die Ansteuerung der \hyperlink{classMatrix}{Matrix} ermöglicht. Beispiel\+: 
+\begin{DoxyCode}
+\hyperlink{classMatrix}{Matrix} matrix(  );
+\end{DoxyCode}
+ 
+
+\subsection{Dokumentation der Elementfunktionen}
+\index{Matrix@{Matrix}!anzeigen@{anzeigen}}
+\index{anzeigen@{anzeigen}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{anzeigen(unsigned dauer=500)}{anzeigen(unsigned dauer=500)}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+::anzeigen (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{dauer = {\ttfamily 500}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMatrix_a027d9ff5514e47bb49b2df69fb5c8bd9}{}\label{classMatrix_a027d9ff5514e47bb49b2df69fb5c8bd9}
+Setzt den aktuell gespeicherten Zustand aller L\+E\+Ds. 
+\begin{DoxyParams}{Parameter}
+{\em dauer} & Anzeigedauer (in cs) Beispiel\+: 
+\begin{DoxyCode}
+matrix.anzeigen( 500 );
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\index{Matrix@{Matrix}!ausschalten@{ausschalten}}
+\index{ausschalten@{ausschalten}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{ausschalten(unsigned zeile, unsigned spalte)}{ausschalten(unsigned zeile, unsigned spalte)}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+::ausschalten (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{zeile, }
+\item[{unsigned}]{spalte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMatrix_a83a04c1348df17c2710baae633975a3f}{}\label{classMatrix_a83a04c1348df17c2710baae633975a3f}
+Schaltet die jeweilige \hyperlink{classLED}{L\+ED} der \hyperlink{classMatrix}{Matrix} aus. 
+\begin{DoxyParams}{Parameter}
+{\em zeile} & Auszuschaltende Zeilennummer (1...8) \\
+\hline
+{\em spalte} & Auszuschaltende Spaltennummer (1...8) Beispiel\+: 
+\begin{DoxyCode}
+matrix.ausschalten( 5, 6 );
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\index{Matrix@{Matrix}!einschalten@{einschalten}}
+\index{einschalten@{einschalten}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{einschalten(unsigned zeile, unsigned spalte)}{einschalten(unsigned zeile, unsigned spalte)}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+::einschalten (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{zeile, }
+\item[{unsigned}]{spalte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMatrix_abea6c950e05056f76264b3ee4c6c0474}{}\label{classMatrix_abea6c950e05056f76264b3ee4c6c0474}
+Schaltet die jeweilige \hyperlink{classLED}{L\+ED} der \hyperlink{classMatrix}{Matrix} ein. 
+\begin{DoxyParams}{Parameter}
+{\em zeile} & Einzuschaltende Zeilennummer (1...8) \\
+\hline
+{\em spalte} & Einzuschaltende Spaltennummer (1...8) Beispiel\+: 
+\begin{DoxyCode}
+matrix.einschalten( 5, 6);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\index{Matrix@{Matrix}!initialisiere@{initialisiere}}
+\index{initialisiere@{initialisiere}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{initialisiere(int zeilen[], int spalten[])}{initialisiere(int zeilen[], int spalten[])}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+::initialisiere (
+\begin{DoxyParamCaption}
+\item[{int}]{zeilen\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{spalten\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMatrix_ab0eb0c710ec849cf46ac44dbc80a60a0}{}\label{classMatrix_ab0eb0c710ec849cf46ac44dbc80a60a0}
+Initialisiert die L\+E\+D-\/\+Matrix. 
+\begin{DoxyParams}{Parameter}
+{\em zeilen\mbox{[}$\,$\mbox{]}} & Array der Pins für die Zeilen (R1, R2, R3, R4, R5, R6, R7, R8) \\
+\hline
+{\em spalten\mbox{[}$\,$\mbox{]}} & Array der Pins für die Spalten (R1, R2, R3, R4, R5, R6, R7, R8) Beispiel\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} zeilen[] = \{9, A1, 8, 12, 1, 7, 2, 5 \};         \textcolor{comment}{// R1...R8}
+\textcolor{keywordtype}{int} spalten[] = \{A0, 3, 4, 10, 6, 11, A2, A3\};  \textcolor{comment}{// C1...C8}
+matrix.initialisiere(zeilen, spalten);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\index{Matrix@{Matrix}!loesche\+Alles@{loesche\+Alles}}
+\index{loesche\+Alles@{loesche\+Alles}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{loesche\+Alles()}{loescheAlles()}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+::loesche\+Alles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMatrix_adb92ec745c6a8d3e3db45f29b6605b34}{}\label{classMatrix_adb92ec745c6a8d3e3db45f29b6605b34}
+Schaltet alle L\+E\+Ds auf der \hyperlink{classMatrix}{Matrix} aus. Beispiel\+: 
+\begin{DoxyCode}
+matrix.loescheAlles();
+\end{DoxyCode}
+ \index{Matrix@{Matrix}!setze\+Zustand@{setze\+Zustand}}
+\index{setze\+Zustand@{setze\+Zustand}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{setze\+Zustand(bool zustand[][8])}{setzeZustand(bool zustand[][8])}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+::setze\+Zustand (
+\begin{DoxyParamCaption}
+\item[{bool}]{zustand\mbox{[}$\,$\mbox{]}\mbox{[}8\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMatrix_ac4ae600939342ca37a68aaa62bc7a22c}{}\label{classMatrix_ac4ae600939342ca37a68aaa62bc7a22c}
+Setzt den Zustand aller L\+E\+Ds der \hyperlink{classMatrix}{Matrix}. 
+\begin{DoxyParams}{Parameter}
+{\em zustand\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & 2D Array mit 0/1 Werten der jeweiligen \hyperlink{classLED}{L\+ED} Beispiel\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{bool} zustand[8][8] = \{ 
+\{0, 0, 1, 1, 1, 1, 0, 0 \}
+,\{0, 0, 0, 1, 1, 0, 0, 0 \}
+,\{0, 0, 0, 1, 1, 0, 0, 0 \}
+,\{0, 0, 0, 1, 1, 0, 0, 0 \}
+,\{0, 0, 0, 1, 1, 0, 0, 0 \}
+,\{0, 0, 0, 1, 1, 0, 0, 0 \}
+,\{0, 0, 0, 1, 1, 0, 0, 0 \}
+,\{0, 0, 1, 1, 1, 1, 0, 0 \}  
+\};
+matrix.setzeZustand( zustand );
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\index{Matrix@{Matrix}!test@{test}}
+\index{test@{test}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{test()}{test()}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+::test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMatrix_a607d16d3c8242dcbb5db75b5872e5561}{}\label{classMatrix_a607d16d3c8242dcbb5db75b5872e5561}
+Schaltet alle L\+E\+Ds auf der \hyperlink{classMatrix}{Matrix} ein. Beispiel\+: 
+\begin{DoxyCode}
+matrix.test();
+\end{DoxyCode}
+ 
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+matrix/Matrix.\+h\end{DoxyCompactItemize}

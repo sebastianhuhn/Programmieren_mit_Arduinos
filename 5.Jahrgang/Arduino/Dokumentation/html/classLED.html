@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>WFO: Arduino Informatik-Schulprojekt: LED Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">WFO: Arduino Informatik-Schulprojekt
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.11 -->
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="classLED-members.html">Aufstellung aller Elemente</a>  </div>
+  <div class="headertitle">
+<div class="title">LED Klassenreferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Diese Klasse ermöglicht die Verwendung von LEDs. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in Reihe zu schalten ist. Außerdem ist es notwendig, dass das zweite Bein der <a class="el" href="classLED.html" title="Diese Klasse ermöglicht die Verwendung von LEDs. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in ...">LED</a> mit Masse(GND) verbunden ist.  
+ <a href="classLED.html#details">Mehr ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="LED_8h_source.html">LED.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:adb38dd538a49968fd6ec6a4ff7c62ff6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLED.html#adb38dd538a49968fd6ec6a4ff7c62ff6">LED</a> (unsigned pin)</td></tr>
+<tr class="separator:adb38dd538a49968fd6ec6a4ff7c62ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5c7f95602d39dd135d76d1b0c101a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLED.html#aab5c7f95602d39dd135d76d1b0c101a0">einschalten</a> ()</td></tr>
+<tr class="separator:aab5c7f95602d39dd135d76d1b0c101a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fdba755aeac3329ca6b4f140b3e65c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLED.html#a4fdba755aeac3329ca6b4f140b3e65c6">ausschalten</a> ()</td></tr>
+<tr class="separator:a4fdba755aeac3329ca6b4f140b3e65c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Diese Klasse ermöglicht die Verwendung von LEDs. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in Reihe zu schalten ist. Außerdem ist es notwendig, dass das zweite Bein der <a class="el" href="classLED.html" title="Diese Klasse ermöglicht die Verwendung von LEDs. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in ...">LED</a> mit Masse(GND) verbunden ist. </p>
+</div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a class="anchor" id="adb38dd538a49968fd6ec6a4ff7c62ff6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LED::LED </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Konstruktor</p>
+<p>Erstellt ein Objekt, welches die Ansteuerung einer einzelnen <a class="el" href="classLED.html" title="Diese Klasse ermöglicht die Verwendung von LEDs. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in ...">LED</a> ermöglicht. Hierbei muss der verwendete Pin angegeben werden. </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>Verwendete Pin-Nummer Beispiel: <div class="fragment"><div class="line"><a class="code" href="classLED.html">LED</a> grueneLED( 5 );</div></div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a class="anchor" id="a4fdba755aeac3329ca6b4f140b3e65c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LED::ausschalten </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Schaltet die <a class="el" href="classLED.html" title="Diese Klasse ermöglicht die Verwendung von LEDs. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in ...">LED</a> aus. Beispiel: </p><div class="fragment"><div class="line">grueneLED.ausschalten();</div></div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="aab5c7f95602d39dd135d76d1b0c101a0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LED::einschalten </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Schaltet die <a class="el" href="classLED.html" title="Diese Klasse ermöglicht die Verwendung von LEDs. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in ...">LED</a> ein. Beispiel: </p><div class="fragment"><div class="line">grueneLED.einschalten();</div></div><!-- fragment --> 
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>led/<a class="el" href="LED_8h_source.html">LED.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

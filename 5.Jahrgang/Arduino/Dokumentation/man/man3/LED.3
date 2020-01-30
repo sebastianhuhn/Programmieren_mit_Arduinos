@@ -1,0 +1,71 @@
+.TH "LED" 3 "Fre Aug 4 2017" "WFO: Arduino Informatik-Schulprojekt" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LED \- Diese Klasse ermöglicht die Verwendung von LEDs\&. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in Reihe zu schalten ist\&. Außerdem ist es notwendig, dass das zweite Bein der \fBLED\fP mit Masse(GND) verbunden ist\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LED\&.h>\fP
+.SS "Öffentliche Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBLED\fP (unsigned pin)"
+.br
+.ti -1c
+.RI "void \fBeinschalten\fP ()"
+.br
+.ti -1c
+.RI "void \fBausschalten\fP ()"
+.br
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+Diese Klasse ermöglicht die Verwendung von LEDs\&. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in Reihe zu schalten ist\&. Außerdem ist es notwendig, dass das zweite Bein der \fBLED\fP mit Masse(GND) verbunden ist\&. 
+.SH "Beschreibung der Konstruktoren und Destruktoren"
+.PP 
+.SS "LED::LED (unsigned pin)\fC [inline]\fP, \fC [explicit]\fP"
+Konstruktor
+.PP
+Erstellt ein Objekt, welches die Ansteuerung einer einzelnen \fBLED\fP ermöglicht\&. Hierbei muss der verwendete Pin angegeben werden\&. 
+.PP
+\fBParameter:\fP
+.RS 4
+\fIpin\fP Verwendete Pin-Nummer Beispiel: 
+.PP
+.nf
+LED grueneLED( 5 );
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "void LED::ausschalten ()\fC [inline]\fP"
+Schaltet die \fBLED\fP aus\&. Beispiel: 
+.PP
+.nf
+grueneLED\&.ausschalten();
+
+.fi
+.PP
+ 
+.SS "void LED::einschalten ()\fC [inline]\fP"
+Schaltet die \fBLED\fP ein\&. Beispiel: 
+.PP
+.nf
+grueneLED\&.einschalten();
+
+.fi
+.PP
+ 
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für WFO: Arduino Informatik-Schulprojekt aus dem Quellcode\&.

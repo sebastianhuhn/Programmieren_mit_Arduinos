@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>WFO: Arduino Informatik-Schulprojekt: kabel/Kabel.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">WFO: Arduino Informatik-Schulprojekt
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.11 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a924ac12431b92f9820b6afb0499f9e1.html">kabel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Kabel.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef KABEL_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define KABEL_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classKabel.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classKabel.html">Kabel</a> {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classKabel.html#a7a64c97ea252de29785d55e21cfbe1c9">   22</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classKabel.html#a7a64c97ea252de29785d55e21cfbe1c9">Kabel</a>( <span class="keywordtype">unsigned</span> pin ) </div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        : m_pin(pin){</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        pinMode(m_pin, INPUT_PULLUP);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">//</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classKabel.html#ab7c7c5a852ef3aca5608363ce722935d">   37</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKabel.html#ab7c7c5a852ef3aca5608363ce722935d">schaltkreisGeschlossen</a>(){</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> ( digitalRead(m_pin) == LOW );</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classKabel.html#a0f963806871013c34de5da699d71fe1c">   50</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKabel.html#a0f963806871013c34de5da699d71fe1c">schaltkreisGeoeffnet</a>(){</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> ( digitalRead(m_pin) == HIGH );</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">unsigned</span> m_pin;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif // KABEL_H</span></div><div class="ttc" id="classKabel_html"><div class="ttname"><a href="classKabel.html">Kabel</a></div><div class="ttdoc">Diese Klasse ermöglicht die Verwendung von Kabeln. Außerdem ist es notwendig, dass eine Seite des Kab...</div><div class="ttdef"><b>Definition:</b> Kabel.h:9</div></div>
+<div class="ttc" id="classKabel_html_ab7c7c5a852ef3aca5608363ce722935d"><div class="ttname"><a href="classKabel.html#ab7c7c5a852ef3aca5608363ce722935d">Kabel::schaltkreisGeschlossen</a></div><div class="ttdeci">bool schaltkreisGeschlossen()</div><div class="ttdef"><b>Definition:</b> Kabel.h:37</div></div>
+<div class="ttc" id="classKabel_html_a0f963806871013c34de5da699d71fe1c"><div class="ttname"><a href="classKabel.html#a0f963806871013c34de5da699d71fe1c">Kabel::schaltkreisGeoeffnet</a></div><div class="ttdeci">bool schaltkreisGeoeffnet()</div><div class="ttdef"><b>Definition:</b> Kabel.h:50</div></div>
+<div class="ttc" id="classKabel_html_a7a64c97ea252de29785d55e21cfbe1c9"><div class="ttname"><a href="classKabel.html#a7a64c97ea252de29785d55e21cfbe1c9">Kabel::Kabel</a></div><div class="ttdeci">Kabel(unsigned pin)</div><div class="ttdef"><b>Definition:</b> Kabel.h:22</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

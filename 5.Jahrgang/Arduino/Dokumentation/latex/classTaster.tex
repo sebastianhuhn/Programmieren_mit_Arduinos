@@ -1,0 +1,97 @@
+\hypertarget{classTaster}{}\section{Taster Klassenreferenz}
+\label{classTaster}\index{Taster@{Taster}}
+
+
+Diese Klasse ermöglicht die Verwendung von Tastern. Wichtig hierbei ist, dass das Schalten gegen Masse (G\+ND) erfolgt.  
+
+
+
+
+{\ttfamily \#include $<$Taster.\+h$>$}
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTaster_af6efc69103fb73ee32e850a0775df5a0}{Taster} (unsigned pin)
+\item 
+bool \hyperlink{classTaster_abfc74fc45547823635bdada479df8605}{wurde\+Gedrueckt} ()
+\item 
+void \hyperlink{classTaster_a91be23493d822f8e836383ad9fac0573}{loesche\+Markierung} ()
+\item 
+void \hyperlink{classTaster_a59c00d08ebcd2f4317f2f6ccaf0ba23a}{setze\+Aktion} (void($\ast$funktion)(void))
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+Diese Klasse ermöglicht die Verwendung von Tastern. Wichtig hierbei ist, dass das Schalten gegen Masse (G\+ND) erfolgt. 
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\index{Taster@{Taster}!Taster@{Taster}}
+\index{Taster@{Taster}!Taster@{Taster}}
+\subsubsection[{\texorpdfstring{Taster(unsigned pin)}{Taster(unsigned pin)}}]{\setlength{\rightskip}{0pt plus 5cm}Taster\+::\+Taster (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{pin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classTaster_af6efc69103fb73ee32e850a0775df5a0}{}\label{classTaster_af6efc69103fb73ee32e850a0775df5a0}
+Konstruktor
+
+Erstellt ein Objekt, welches die Verwendung eines Tasters ermöglicht. Hierbei muss der verwendete Pin angegeben werden. 
+\begin{DoxyParams}{Parameter}
+{\em pin} & Verwendete Pin-\/\+Nummer Beispiel\+: 
+\begin{DoxyCode}
+\hyperlink{classTaster}{Taster} meinTaster( 5 );
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\index{Taster@{Taster}!loesche\+Markierung@{loesche\+Markierung}}
+\index{loesche\+Markierung@{loesche\+Markierung}!Taster@{Taster}}
+\subsubsection[{\texorpdfstring{loesche\+Markierung()}{loescheMarkierung()}}]{\setlength{\rightskip}{0pt plus 5cm}void Taster\+::loesche\+Markierung (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classTaster_a91be23493d822f8e836383ad9fac0573}{}\label{classTaster_a91be23493d822f8e836383ad9fac0573}
+Entfernt die Markierung, dass der \hyperlink{classTaster}{Taster} gedrückt wurde.
+
+
+\begin{DoxyCode}
+meinTaster.loescheMarkierung()
+\end{DoxyCode}
+ \index{Taster@{Taster}!setze\+Aktion@{setze\+Aktion}}
+\index{setze\+Aktion@{setze\+Aktion}!Taster@{Taster}}
+\subsubsection[{\texorpdfstring{setze\+Aktion(void($\ast$funktion)(void))}{setzeAktion(void(*funktion)(void))}}]{\setlength{\rightskip}{0pt plus 5cm}void Taster\+::setze\+Aktion (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{funktion}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classTaster_a59c00d08ebcd2f4317f2f6ccaf0ba23a}{}\label{classTaster_a59c00d08ebcd2f4317f2f6ccaf0ba23a}
+Setz eine Funktion, die bei Druck des Tasters ausgeführt wird. Beispiel\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} meineAktion()\{
+ \textcolor{comment}{// Mache irgendwas }
+\}
+meinTaster.setzeAktion( meineAktion );
+\end{DoxyCode}
+ \index{Taster@{Taster}!wurde\+Gedrueckt@{wurde\+Gedrueckt}}
+\index{wurde\+Gedrueckt@{wurde\+Gedrueckt}!Taster@{Taster}}
+\subsubsection[{\texorpdfstring{wurde\+Gedrueckt()}{wurdeGedrueckt()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Taster\+::wurde\+Gedrueckt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classTaster_abfc74fc45547823635bdada479df8605}{}\label{classTaster_abfc74fc45547823635bdada479df8605}
+Überprüft, ob der \hyperlink{classTaster}{Taster} gedrückt wurde. \begin{DoxyReturn}{Rückgabe}
+wahr falls gedrückt, sonst falsch 
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}( meinTaster.wurdeGedrueckt() )\{
+\textcolor{comment}{// Mache irgendwas}
+\}
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+taster/Taster.\+h\end{DoxyCompactItemize}

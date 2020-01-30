@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>WFO: Arduino Informatik-Schulprojekt: audiosensor/AudioSensor.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">WFO: Arduino Informatik-Schulprojekt
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.11 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6c30471cb39104c46e752196a82cbb89.html">audiosensor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AudioSensor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef AUDIOSENSOR_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define AUDIOSENSOR_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classAudioSensor.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAudioSensor.html">AudioSensor</a> {</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classAudioSensor.html#a7c59fa3cce1dc78ad83030c553c7132e">   19</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classAudioSensor.html#a7c59fa3cce1dc78ad83030c553c7132e">AudioSensor</a>( <span class="keywordtype">unsigned</span> dig_pin, <span class="keywordtype">unsigned</span> ana_pin = 0  )</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        : m_dig_pin( dig_pin )</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        , m_ana_pin( ana_pin )</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        , m_aktiv( true ) {</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        pinMode(m_dig_pin, INPUT_PULLUP);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classAudioSensor.html#a41a73c0fcf24e91be41d87295253108b">   36</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classAudioSensor.html#a41a73c0fcf24e91be41d87295253108b">laut</a>(){</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> ( m_aktiv &amp;&amp; digitalRead( m_dig_pin ) == HIGH );</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classAudioSensor.html#a9ebc7c90ce24bed33aa5360583e97402">   47</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classAudioSensor.html#a9ebc7c90ce24bed33aa5360583e97402">einschalten</a>(){</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        m_aktiv = <span class="keyword">true</span>;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classAudioSensor.html#a76ef9a37d7a1463311aebc4acede6b9a">   58</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classAudioSensor.html#a76ef9a37d7a1463311aebc4acede6b9a">ausschalten</a>(){</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        m_aktiv = <span class="keyword">false</span>;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div><div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classAudioSensor.html#a00a0b1a4b8f0191a7266a1fa943d9397">   69</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classAudioSensor.html#a00a0b1a4b8f0191a7266a1fa943d9397">missLautstaerke</a>(){</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span>( m_ana_pin &lt;= 0 ) {</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">return</span> -1;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> analogRead(m_ana_pin);</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;         </div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">unsigned</span> m_dig_pin;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">unsigned</span> m_ana_pin;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">bool</span> m_aktiv;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif // DISPLAY_H</span></div><div class="ttc" id="classAudioSensor_html_a00a0b1a4b8f0191a7266a1fa943d9397"><div class="ttname"><a href="classAudioSensor.html#a00a0b1a4b8f0191a7266a1fa943d9397">AudioSensor::missLautstaerke</a></div><div class="ttdeci">int missLautstaerke()</div><div class="ttdef"><b>Definition:</b> AudioSensor.h:69</div></div>
+<div class="ttc" id="classAudioSensor_html_a9ebc7c90ce24bed33aa5360583e97402"><div class="ttname"><a href="classAudioSensor.html#a9ebc7c90ce24bed33aa5360583e97402">AudioSensor::einschalten</a></div><div class="ttdeci">void einschalten()</div><div class="ttdef"><b>Definition:</b> AudioSensor.h:47</div></div>
+<div class="ttc" id="classAudioSensor_html_a7c59fa3cce1dc78ad83030c553c7132e"><div class="ttname"><a href="classAudioSensor.html#a7c59fa3cce1dc78ad83030c553c7132e">AudioSensor::AudioSensor</a></div><div class="ttdeci">AudioSensor(unsigned dig_pin, unsigned ana_pin=0)</div><div class="ttdef"><b>Definition:</b> AudioSensor.h:19</div></div>
+<div class="ttc" id="classAudioSensor_html_a41a73c0fcf24e91be41d87295253108b"><div class="ttname"><a href="classAudioSensor.html#a41a73c0fcf24e91be41d87295253108b">AudioSensor::laut</a></div><div class="ttdeci">bool laut()</div><div class="ttdef"><b>Definition:</b> AudioSensor.h:36</div></div>
+<div class="ttc" id="classAudioSensor_html"><div class="ttname"><a href="classAudioSensor.html">AudioSensor</a></div><div class="ttdoc">Diese Klasse ermöglicht die Verwendung des Audiosensor. </div><div class="ttdef"><b>Definition:</b> AudioSensor.h:8</div></div>
+<div class="ttc" id="classAudioSensor_html_a76ef9a37d7a1463311aebc4acede6b9a"><div class="ttname"><a href="classAudioSensor.html#a76ef9a37d7a1463311aebc4acede6b9a">AudioSensor::ausschalten</a></div><div class="ttdeci">void ausschalten()</div><div class="ttdef"><b>Definition:</b> AudioSensor.h:58</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

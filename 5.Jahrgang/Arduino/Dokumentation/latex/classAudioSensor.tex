@@ -1,0 +1,98 @@
+\hypertarget{classAudioSensor}{}\section{Audio\+Sensor Klassenreferenz}
+\label{classAudioSensor}\index{Audio\+Sensor@{Audio\+Sensor}}
+
+
+Diese Klasse ermöglicht die Verwendung des Audiosensor.  
+
+
+
+
+{\ttfamily \#include $<$Audio\+Sensor.\+h$>$}
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAudioSensor_a7c59fa3cce1dc78ad83030c553c7132e}{Audio\+Sensor} (unsigned dig\+\_\+pin, unsigned ana\+\_\+pin=0)
+\item 
+bool \hyperlink{classAudioSensor_a41a73c0fcf24e91be41d87295253108b}{laut} ()
+\item 
+void \hyperlink{classAudioSensor_a9ebc7c90ce24bed33aa5360583e97402}{einschalten} ()
+\item 
+void \hyperlink{classAudioSensor_a76ef9a37d7a1463311aebc4acede6b9a}{ausschalten} ()
+\item 
+int \hyperlink{classAudioSensor_a00a0b1a4b8f0191a7266a1fa943d9397}{miss\+Lautstaerke} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+Diese Klasse ermöglicht die Verwendung des Audiosensor. 
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\index{Audio\+Sensor@{Audio\+Sensor}!Audio\+Sensor@{Audio\+Sensor}}
+\index{Audio\+Sensor@{Audio\+Sensor}!Audio\+Sensor@{Audio\+Sensor}}
+\subsubsection[{\texorpdfstring{Audio\+Sensor(unsigned dig\+\_\+pin, unsigned ana\+\_\+pin=0)}{AudioSensor(unsigned dig\_pin, unsigned ana\_pin=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Audio\+Sensor\+::\+Audio\+Sensor (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{dig\+\_\+pin, }
+\item[{unsigned}]{ana\+\_\+pin = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classAudioSensor_a7c59fa3cce1dc78ad83030c553c7132e}{}\label{classAudioSensor_a7c59fa3cce1dc78ad83030c553c7132e}
+Konstruktor
+
+Erstellt ein Objekt, welches zur Abfrage des Audiosensor dient. Beispiel\+: 
+\begin{DoxyCode}
+\hyperlink{classAudioSensor}{AudioSensor} sensor;
+\end{DoxyCode}
+ 
+
+\subsection{Dokumentation der Elementfunktionen}
+\index{Audio\+Sensor@{Audio\+Sensor}!ausschalten@{ausschalten}}
+\index{ausschalten@{ausschalten}!Audio\+Sensor@{Audio\+Sensor}}
+\subsubsection[{\texorpdfstring{ausschalten()}{ausschalten()}}]{\setlength{\rightskip}{0pt plus 5cm}void Audio\+Sensor\+::ausschalten (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classAudioSensor_a76ef9a37d7a1463311aebc4acede6b9a}{}\label{classAudioSensor_a76ef9a37d7a1463311aebc4acede6b9a}
+Schaltet den Sensor aus. Beispiel\+: 
+\begin{DoxyCode}
+sensor.\hyperlink{classAudioSensor_a76ef9a37d7a1463311aebc4acede6b9a}{ausschalten}();
+\end{DoxyCode}
+ \index{Audio\+Sensor@{Audio\+Sensor}!einschalten@{einschalten}}
+\index{einschalten@{einschalten}!Audio\+Sensor@{Audio\+Sensor}}
+\subsubsection[{\texorpdfstring{einschalten()}{einschalten()}}]{\setlength{\rightskip}{0pt plus 5cm}void Audio\+Sensor\+::einschalten (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classAudioSensor_a9ebc7c90ce24bed33aa5360583e97402}{}\label{classAudioSensor_a9ebc7c90ce24bed33aa5360583e97402}
+Schaltet den Sensor ein. Beispiel\+: 
+\begin{DoxyCode}
+sensor.\hyperlink{classAudioSensor_a9ebc7c90ce24bed33aa5360583e97402}{einschalten}();
+\end{DoxyCode}
+ \index{Audio\+Sensor@{Audio\+Sensor}!laut@{laut}}
+\index{laut@{laut}!Audio\+Sensor@{Audio\+Sensor}}
+\subsubsection[{\texorpdfstring{laut()}{laut()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Audio\+Sensor\+::laut (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classAudioSensor_a41a73c0fcf24e91be41d87295253108b}{}\label{classAudioSensor_a41a73c0fcf24e91be41d87295253108b}
+Prüft, ob die aktuelle Lautstärke den Grenzwert überschritten wurde. Der Grenzwert wurde mit der \char`\"{}\+Einstellschraube\char`\"{} justiert. Beispiel\+: 
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}( sensor.\hyperlink{classAudioSensor_a41a73c0fcf24e91be41d87295253108b}{laut}() )\{
+ \textcolor{comment}{// mach irgendwas}
+\}
+\end{DoxyCode}
+ \index{Audio\+Sensor@{Audio\+Sensor}!miss\+Lautstaerke@{miss\+Lautstaerke}}
+\index{miss\+Lautstaerke@{miss\+Lautstaerke}!Audio\+Sensor@{Audio\+Sensor}}
+\subsubsection[{\texorpdfstring{miss\+Lautstaerke()}{missLautstaerke()}}]{\setlength{\rightskip}{0pt plus 5cm}int Audio\+Sensor\+::miss\+Lautstaerke (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classAudioSensor_a00a0b1a4b8f0191a7266a1fa943d9397}{}\label{classAudioSensor_a00a0b1a4b8f0191a7266a1fa943d9397}
+Der Grenzwert wurde mit der \char`\"{}\+Einstellschraube\char`\"{} justiert. Beispiel\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} lautstaerke = sensor.\hyperlink{classAudioSensor_a00a0b1a4b8f0191a7266a1fa943d9397}{missLautstaerke}();
+\end{DoxyCode}
+ 
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+audiosensor/Audio\+Sensor.\+h\end{DoxyCompactItemize}

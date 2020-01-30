@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>WFO: Arduino Informatik-Schulprojekt: Matrix Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">WFO: Arduino Informatik-Schulprojekt
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.11 -->
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="classMatrix-members.html">Aufstellung aller Elemente</a>  </div>
+  <div class="headertitle">
+<div class="title">Matrix Klassenreferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Diese Klasse ermöglicht die Verwendung der 8x8 LED-Matrix. Diese <a class="el" href="classMatrix.html" title="Diese Klasse ermöglicht die Verwendung der 8x8 LED-Matrix. Diese Matrix besteht auch 8 Zeilen (rows R...">Matrix</a> besteht auch 8 Zeilen (rows R1...R8) und 8 Spalten (columns C1...C8). Hierbei agieren die Zeilen als Anode (inaktiv bei LOW), die Spalten als Kathode (inaktiv bei HIGH). Wichtig hierbei ist, dass ein 1K Ohm Widerstand in Reihe bei JEDER Kathode (C1...C8) zu schalten ist.  
+ <a href="classMatrix.html#details">Mehr ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Matrix_8h_source.html">Matrix.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a2dba13c45127354c9f75ef576f49269b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a2dba13c45127354c9f75ef576f49269b">Matrix</a> ()</td></tr>
+<tr class="separator:a2dba13c45127354c9f75ef576f49269b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0eb0c710ec849cf46ac44dbc80a60a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#ab0eb0c710ec849cf46ac44dbc80a60a0">initialisiere</a> (int zeilen[], int spalten[])</td></tr>
+<tr class="separator:ab0eb0c710ec849cf46ac44dbc80a60a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea6c950e05056f76264b3ee4c6c0474"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#abea6c950e05056f76264b3ee4c6c0474">einschalten</a> (unsigned zeile, unsigned spalte)</td></tr>
+<tr class="separator:abea6c950e05056f76264b3ee4c6c0474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83a04c1348df17c2710baae633975a3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a83a04c1348df17c2710baae633975a3f">ausschalten</a> (unsigned zeile, unsigned spalte)</td></tr>
+<tr class="separator:a83a04c1348df17c2710baae633975a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607d16d3c8242dcbb5db75b5872e5561"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a607d16d3c8242dcbb5db75b5872e5561">test</a> ()</td></tr>
+<tr class="separator:a607d16d3c8242dcbb5db75b5872e5561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ae600939342ca37a68aaa62bc7a22c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#ac4ae600939342ca37a68aaa62bc7a22c">setzeZustand</a> (bool zustand[][8])</td></tr>
+<tr class="separator:ac4ae600939342ca37a68aaa62bc7a22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027d9ff5514e47bb49b2df69fb5c8bd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a027d9ff5514e47bb49b2df69fb5c8bd9">anzeigen</a> (unsigned dauer=500)</td></tr>
+<tr class="separator:a027d9ff5514e47bb49b2df69fb5c8bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb92ec745c6a8d3e3db45f29b6605b34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#adb92ec745c6a8d3e3db45f29b6605b34">loescheAlles</a> ()</td></tr>
+<tr class="separator:adb92ec745c6a8d3e3db45f29b6605b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Diese Klasse ermöglicht die Verwendung der 8x8 LED-Matrix. Diese <a class="el" href="classMatrix.html" title="Diese Klasse ermöglicht die Verwendung der 8x8 LED-Matrix. Diese Matrix besteht auch 8 Zeilen (rows R...">Matrix</a> besteht auch 8 Zeilen (rows R1...R8) und 8 Spalten (columns C1...C8). Hierbei agieren die Zeilen als Anode (inaktiv bei LOW), die Spalten als Kathode (inaktiv bei HIGH). Wichtig hierbei ist, dass ein 1K Ohm Widerstand in Reihe bei JEDER Kathode (C1...C8) zu schalten ist. </p>
+</div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a class="anchor" id="a2dba13c45127354c9f75ef576f49269b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix::Matrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Konstruktor</p>
+<p>Erstellt ein Objekt, welches die Ansteuerung der <a class="el" href="classMatrix.html" title="Diese Klasse ermöglicht die Verwendung der 8x8 LED-Matrix. Diese Matrix besteht auch 8 Zeilen (rows R...">Matrix</a> ermöglicht. Beispiel: </p><div class="fragment"><div class="line"><a class="code" href="classMatrix.html">Matrix</a> matrix(  );</div></div><!-- fragment --> 
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a class="anchor" id="a027d9ff5514e47bb49b2df69fb5c8bd9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::anzeigen </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>dauer</em> = <code>500</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setzt den aktuell gespeicherten Zustand aller LEDs. </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dauer</td><td>Anzeigedauer (in cs) Beispiel: <div class="fragment"><div class="line">matrix.anzeigen( 500 );</div></div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a83a04c1348df17c2710baae633975a3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::ausschalten </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>zeile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>spalte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Schaltet die jeweilige <a class="el" href="classLED.html" title="Diese Klasse ermöglicht die Verwendung von LEDs. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in ...">LED</a> der <a class="el" href="classMatrix.html" title="Diese Klasse ermöglicht die Verwendung der 8x8 LED-Matrix. Diese Matrix besteht auch 8 Zeilen (rows R...">Matrix</a> aus. </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zeile</td><td>Auszuschaltende Zeilennummer (1...8) </td></tr>
+    <tr><td class="paramname">spalte</td><td>Auszuschaltende Spaltennummer (1...8) Beispiel: <div class="fragment"><div class="line">matrix.ausschalten( 5, 6 );</div></div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abea6c950e05056f76264b3ee4c6c0474"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::einschalten </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>zeile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>spalte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Schaltet die jeweilige <a class="el" href="classLED.html" title="Diese Klasse ermöglicht die Verwendung von LEDs. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in ...">LED</a> der <a class="el" href="classMatrix.html" title="Diese Klasse ermöglicht die Verwendung der 8x8 LED-Matrix. Diese Matrix besteht auch 8 Zeilen (rows R...">Matrix</a> ein. </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zeile</td><td>Einzuschaltende Zeilennummer (1...8) </td></tr>
+    <tr><td class="paramname">spalte</td><td>Einzuschaltende Spaltennummer (1...8) Beispiel: <div class="fragment"><div class="line">matrix.einschalten( 5, 6);</div></div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab0eb0c710ec849cf46ac44dbc80a60a0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::initialisiere </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zeilen</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spalten</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initialisiert die LED-Matrix. </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zeilen[]</td><td>Array der Pins für die Zeilen (R1, R2, R3, R4, R5, R6, R7, R8) </td></tr>
+    <tr><td class="paramname">spalten[]</td><td>Array der Pins für die Spalten (R1, R2, R3, R4, R5, R6, R7, R8) Beispiel: <div class="fragment"><div class="line"><span class="keywordtype">int</span> zeilen[] = {9, A1, 8, 12, 1, 7, 2, 5 };         <span class="comment">// R1...R8</span></div><div class="line"><span class="keywordtype">int</span> spalten[] = {A0, 3, 4, 10, 6, 11, A2, A3};  <span class="comment">// C1...C8</span></div><div class="line">matrix.initialisiere(zeilen, spalten);</div></div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adb92ec745c6a8d3e3db45f29b6605b34"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::loescheAlles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Schaltet alle LEDs auf der <a class="el" href="classMatrix.html" title="Diese Klasse ermöglicht die Verwendung der 8x8 LED-Matrix. Diese Matrix besteht auch 8 Zeilen (rows R...">Matrix</a> aus. Beispiel: </p><div class="fragment"><div class="line">matrix.loescheAlles();</div></div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ac4ae600939342ca37a68aaa62bc7a22c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::setzeZustand </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>zustand</em>[][8]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setzt den Zustand aller LEDs der <a class="el" href="classMatrix.html" title="Diese Klasse ermöglicht die Verwendung der 8x8 LED-Matrix. Diese Matrix besteht auch 8 Zeilen (rows R...">Matrix</a>. </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zustand[][]</td><td>2D Array mit 0/1 Werten der jeweiligen <a class="el" href="classLED.html" title="Diese Klasse ermöglicht die Verwendung von LEDs. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in ...">LED</a> Beispiel: <div class="fragment"><div class="line"><span class="keywordtype">bool</span> zustand[8][8] = { </div><div class="line">{0, 0, 1, 1, 1, 1, 0, 0 }</div><div class="line">,{0, 0, 0, 1, 1, 0, 0, 0 }</div><div class="line">,{0, 0, 0, 1, 1, 0, 0, 0 }</div><div class="line">,{0, 0, 0, 1, 1, 0, 0, 0 }</div><div class="line">,{0, 0, 0, 1, 1, 0, 0, 0 }</div><div class="line">,{0, 0, 0, 1, 1, 0, 0, 0 }</div><div class="line">,{0, 0, 0, 1, 1, 0, 0, 0 }</div><div class="line">,{0, 0, 1, 1, 1, 1, 0, 0 }  </div><div class="line">};</div><div class="line">matrix.setzeZustand( zustand );</div></div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a607d16d3c8242dcbb5db75b5872e5561"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Schaltet alle LEDs auf der <a class="el" href="classMatrix.html" title="Diese Klasse ermöglicht die Verwendung der 8x8 LED-Matrix. Diese Matrix besteht auch 8 Zeilen (rows R...">Matrix</a> ein. Beispiel: </p><div class="fragment"><div class="line">matrix.test();</div></div><!-- fragment --> 
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>matrix/<a class="el" href="Matrix_8h_source.html">Matrix.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

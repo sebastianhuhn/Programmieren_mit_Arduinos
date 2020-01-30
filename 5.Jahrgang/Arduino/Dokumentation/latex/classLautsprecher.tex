@@ -1,0 +1,64 @@
+\hypertarget{classLautsprecher}{}\section{Lautsprecher Klassenreferenz}
+\label{classLautsprecher}\index{Lautsprecher@{Lautsprecher}}
+
+
+Diese Klasse ermöglicht die Verwendung des Lautsprechers.  
+
+
+
+
+{\ttfamily \#include $<$Lautsprecher.\+h$>$}
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLautsprecher_a00038a01b1406b40ff27d5423b6c75f8}{Lautsprecher} (unsigned pin)
+\item 
+void \hyperlink{classLautsprecher_a1df9b16fe0585a34b7cc4631dd4b1ebe}{spiele\+Ton} (int frequenz, int dauer=1000)
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+Diese Klasse ermöglicht die Verwendung des Lautsprechers. 
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\index{Lautsprecher@{Lautsprecher}!Lautsprecher@{Lautsprecher}}
+\index{Lautsprecher@{Lautsprecher}!Lautsprecher@{Lautsprecher}}
+\subsubsection[{\texorpdfstring{Lautsprecher(unsigned pin)}{Lautsprecher(unsigned pin)}}]{\setlength{\rightskip}{0pt plus 5cm}Lautsprecher\+::\+Lautsprecher (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{pin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classLautsprecher_a00038a01b1406b40ff27d5423b6c75f8}{}\label{classLautsprecher_a00038a01b1406b40ff27d5423b6c75f8}
+Konstruktor
+
+Erstellt ein Objekt, welches zur Ansteuerung des Lautsprechers dient. Beispiel\+: 
+\begin{DoxyCode}
+\hyperlink{classLautsprecher}{Lautsprecher} lautsprecher;
+\end{DoxyCode}
+ 
+
+\subsection{Dokumentation der Elementfunktionen}
+\index{Lautsprecher@{Lautsprecher}!spiele\+Ton@{spiele\+Ton}}
+\index{spiele\+Ton@{spiele\+Ton}!Lautsprecher@{Lautsprecher}}
+\subsubsection[{\texorpdfstring{spiele\+Ton(int frequenz, int dauer=1000)}{spieleTon(int frequenz, int dauer=1000)}}]{\setlength{\rightskip}{0pt plus 5cm}void Lautsprecher\+::spiele\+Ton (
+\begin{DoxyParamCaption}
+\item[{int}]{frequenz, }
+\item[{int}]{dauer = {\ttfamily 1000}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classLautsprecher_a1df9b16fe0585a34b7cc4631dd4b1ebe}{}\label{classLautsprecher_a1df9b16fe0585a34b7cc4631dd4b1ebe}
+Spielt einen Ton über den \hyperlink{classLautsprecher}{Lautsprecher}. Beispiel\+: 
+\begin{DoxyParams}{Parameter}
+{\em frequenz} & Frequenzhöhe des Tons \\
+\hline
+{\em dauer} & Länge des Tons in Millisekunden (optional) 
+\begin{DoxyCode}
+lautsprecher.\hyperlink{classLautsprecher_a1df9b16fe0585a34b7cc4631dd4b1ebe}{spieleTon}( NOTE\_D8, 1000);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+lautsprecher/Lautsprecher.\+h\end{DoxyCompactItemize}

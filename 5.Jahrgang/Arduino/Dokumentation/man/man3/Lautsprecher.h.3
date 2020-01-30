@@ -1,0 +1,470 @@
+.TH "lautsprecher/Lautsprecher.h" 3 "Fre Mai 5 2017" "WFO: Arduino Informatik-Schulprojekt" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lautsprecher/Lautsprecher.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Klassen"
+
+.in +1c
+.ti -1c
+.RI "class \fBLautsprecher\fP"
+.br
+.RI "\fIDiese Klasse ermöglicht die Verwendung des Lautsprechers\&. \fP"
+.in -1c
+.SS "Makrodefinitionen"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNOTE_B0\fP   31"
+.br
+.ti -1c
+.RI "#define \fBNOTE_C1\fP   33"
+.br
+.ti -1c
+.RI "#define \fBNOTE_CS1\fP   35"
+.br
+.ti -1c
+.RI "#define \fBNOTE_D1\fP   37"
+.br
+.ti -1c
+.RI "#define \fBNOTE_DS1\fP   39"
+.br
+.ti -1c
+.RI "#define \fBNOTE_E1\fP   41"
+.br
+.ti -1c
+.RI "#define \fBNOTE_F1\fP   44"
+.br
+.ti -1c
+.RI "#define \fBNOTE_FS1\fP   46"
+.br
+.ti -1c
+.RI "#define \fBNOTE_G1\fP   49"
+.br
+.ti -1c
+.RI "#define \fBNOTE_GS1\fP   52"
+.br
+.ti -1c
+.RI "#define \fBNOTE_A1\fP   55"
+.br
+.ti -1c
+.RI "#define \fBNOTE_AS1\fP   58"
+.br
+.ti -1c
+.RI "#define \fBNOTE_B1\fP   62"
+.br
+.ti -1c
+.RI "#define \fBNOTE_C2\fP   65"
+.br
+.ti -1c
+.RI "#define \fBNOTE_CS2\fP   69"
+.br
+.ti -1c
+.RI "#define \fBNOTE_D2\fP   73"
+.br
+.ti -1c
+.RI "#define \fBNOTE_DS2\fP   78"
+.br
+.ti -1c
+.RI "#define \fBNOTE_E2\fP   82"
+.br
+.ti -1c
+.RI "#define \fBNOTE_F2\fP   87"
+.br
+.ti -1c
+.RI "#define \fBNOTE_FS2\fP   93"
+.br
+.ti -1c
+.RI "#define \fBNOTE_G2\fP   98"
+.br
+.ti -1c
+.RI "#define \fBNOTE_GS2\fP   104"
+.br
+.ti -1c
+.RI "#define \fBNOTE_A2\fP   110"
+.br
+.ti -1c
+.RI "#define \fBNOTE_AS2\fP   117"
+.br
+.ti -1c
+.RI "#define \fBNOTE_B2\fP   123"
+.br
+.ti -1c
+.RI "#define \fBNOTE_C3\fP   131"
+.br
+.ti -1c
+.RI "#define \fBNOTE_CS3\fP   139"
+.br
+.ti -1c
+.RI "#define \fBNOTE_D3\fP   147"
+.br
+.ti -1c
+.RI "#define \fBNOTE_DS3\fP   156"
+.br
+.ti -1c
+.RI "#define \fBNOTE_E3\fP   165"
+.br
+.ti -1c
+.RI "#define \fBNOTE_F3\fP   175"
+.br
+.ti -1c
+.RI "#define \fBNOTE_FS3\fP   185"
+.br
+.ti -1c
+.RI "#define \fBNOTE_G3\fP   196"
+.br
+.ti -1c
+.RI "#define \fBNOTE_GS3\fP   208"
+.br
+.ti -1c
+.RI "#define \fBNOTE_A3\fP   220"
+.br
+.ti -1c
+.RI "#define \fBNOTE_AS3\fP   233"
+.br
+.ti -1c
+.RI "#define \fBNOTE_B3\fP   247"
+.br
+.ti -1c
+.RI "#define \fBNOTE_C4\fP   262"
+.br
+.ti -1c
+.RI "#define \fBNOTE_CS4\fP   277"
+.br
+.ti -1c
+.RI "#define \fBNOTE_D4\fP   294"
+.br
+.ti -1c
+.RI "#define \fBNOTE_DS4\fP   311"
+.br
+.ti -1c
+.RI "#define \fBNOTE_E4\fP   330"
+.br
+.ti -1c
+.RI "#define \fBNOTE_F4\fP   349"
+.br
+.ti -1c
+.RI "#define \fBNOTE_FS4\fP   370"
+.br
+.ti -1c
+.RI "#define \fBNOTE_G4\fP   392"
+.br
+.ti -1c
+.RI "#define \fBNOTE_GS4\fP   415"
+.br
+.ti -1c
+.RI "#define \fBNOTE_A4\fP   440"
+.br
+.ti -1c
+.RI "#define \fBNOTE_AS4\fP   466"
+.br
+.ti -1c
+.RI "#define \fBNOTE_B4\fP   494"
+.br
+.ti -1c
+.RI "#define \fBNOTE_C5\fP   523"
+.br
+.ti -1c
+.RI "#define \fBNOTE_CS5\fP   554"
+.br
+.ti -1c
+.RI "#define \fBNOTE_D5\fP   587"
+.br
+.ti -1c
+.RI "#define \fBNOTE_DS5\fP   622"
+.br
+.ti -1c
+.RI "#define \fBNOTE_E5\fP   659"
+.br
+.ti -1c
+.RI "#define \fBNOTE_F5\fP   698"
+.br
+.ti -1c
+.RI "#define \fBNOTE_FS5\fP   740"
+.br
+.ti -1c
+.RI "#define \fBNOTE_G5\fP   784"
+.br
+.ti -1c
+.RI "#define \fBNOTE_GS5\fP   831"
+.br
+.ti -1c
+.RI "#define \fBNOTE_A5\fP   880"
+.br
+.ti -1c
+.RI "#define \fBNOTE_AS5\fP   932"
+.br
+.ti -1c
+.RI "#define \fBNOTE_B5\fP   988"
+.br
+.ti -1c
+.RI "#define \fBNOTE_C6\fP   1047"
+.br
+.ti -1c
+.RI "#define \fBNOTE_CS6\fP   1109"
+.br
+.ti -1c
+.RI "#define \fBNOTE_D6\fP   1175"
+.br
+.ti -1c
+.RI "#define \fBNOTE_DS6\fP   1245"
+.br
+.ti -1c
+.RI "#define \fBNOTE_E6\fP   1319"
+.br
+.ti -1c
+.RI "#define \fBNOTE_F6\fP   1397"
+.br
+.ti -1c
+.RI "#define \fBNOTE_FS6\fP   1480"
+.br
+.ti -1c
+.RI "#define \fBNOTE_G6\fP   1568"
+.br
+.ti -1c
+.RI "#define \fBNOTE_GS6\fP   1661"
+.br
+.ti -1c
+.RI "#define \fBNOTE_A6\fP   1760"
+.br
+.ti -1c
+.RI "#define \fBNOTE_AS6\fP   1865"
+.br
+.ti -1c
+.RI "#define \fBNOTE_B6\fP   1976"
+.br
+.ti -1c
+.RI "#define \fBNOTE_C7\fP   2093"
+.br
+.ti -1c
+.RI "#define \fBNOTE_CS7\fP   2217"
+.br
+.ti -1c
+.RI "#define \fBNOTE_D7\fP   2349"
+.br
+.ti -1c
+.RI "#define \fBNOTE_DS7\fP   2489"
+.br
+.ti -1c
+.RI "#define \fBNOTE_E7\fP   2637"
+.br
+.ti -1c
+.RI "#define \fBNOTE_F7\fP   2794"
+.br
+.ti -1c
+.RI "#define \fBNOTE_FS7\fP   2960"
+.br
+.ti -1c
+.RI "#define \fBNOTE_G7\fP   3136"
+.br
+.ti -1c
+.RI "#define \fBNOTE_GS7\fP   3322"
+.br
+.ti -1c
+.RI "#define \fBNOTE_A7\fP   3520"
+.br
+.ti -1c
+.RI "#define \fBNOTE_AS7\fP   3729"
+.br
+.ti -1c
+.RI "#define \fBNOTE_B7\fP   3951"
+.br
+.ti -1c
+.RI "#define \fBNOTE_C8\fP   4186"
+.br
+.ti -1c
+.RI "#define \fBNOTE_CS8\fP   4435"
+.br
+.ti -1c
+.RI "#define \fBNOTE_D8\fP   4699"
+.br
+.ti -1c
+.RI "#define \fBNOTE_DS8\fP   4978"
+.br
+.in -1c
+.SH "Makro-Dokumentation"
+.PP 
+.SS "#define NOTE_A1   55"
+
+.SS "#define NOTE_A2   110"
+
+.SS "#define NOTE_A3   220"
+
+.SS "#define NOTE_A4   440"
+
+.SS "#define NOTE_A5   880"
+
+.SS "#define NOTE_A6   1760"
+
+.SS "#define NOTE_A7   3520"
+
+.SS "#define NOTE_AS1   58"
+
+.SS "#define NOTE_AS2   117"
+
+.SS "#define NOTE_AS3   233"
+
+.SS "#define NOTE_AS4   466"
+
+.SS "#define NOTE_AS5   932"
+
+.SS "#define NOTE_AS6   1865"
+
+.SS "#define NOTE_AS7   3729"
+
+.SS "#define NOTE_B0   31"
+
+.SS "#define NOTE_B1   62"
+
+.SS "#define NOTE_B2   123"
+
+.SS "#define NOTE_B3   247"
+
+.SS "#define NOTE_B4   494"
+
+.SS "#define NOTE_B5   988"
+
+.SS "#define NOTE_B6   1976"
+
+.SS "#define NOTE_B7   3951"
+
+.SS "#define NOTE_C1   33"
+
+.SS "#define NOTE_C2   65"
+
+.SS "#define NOTE_C3   131"
+
+.SS "#define NOTE_C4   262"
+
+.SS "#define NOTE_C5   523"
+
+.SS "#define NOTE_C6   1047"
+
+.SS "#define NOTE_C7   2093"
+
+.SS "#define NOTE_C8   4186"
+
+.SS "#define NOTE_CS1   35"
+
+.SS "#define NOTE_CS2   69"
+
+.SS "#define NOTE_CS3   139"
+
+.SS "#define NOTE_CS4   277"
+
+.SS "#define NOTE_CS5   554"
+
+.SS "#define NOTE_CS6   1109"
+
+.SS "#define NOTE_CS7   2217"
+
+.SS "#define NOTE_CS8   4435"
+
+.SS "#define NOTE_D1   37"
+
+.SS "#define NOTE_D2   73"
+
+.SS "#define NOTE_D3   147"
+
+.SS "#define NOTE_D4   294"
+
+.SS "#define NOTE_D5   587"
+
+.SS "#define NOTE_D6   1175"
+
+.SS "#define NOTE_D7   2349"
+
+.SS "#define NOTE_D8   4699"
+
+.SS "#define NOTE_DS1   39"
+
+.SS "#define NOTE_DS2   78"
+
+.SS "#define NOTE_DS3   156"
+
+.SS "#define NOTE_DS4   311"
+
+.SS "#define NOTE_DS5   622"
+
+.SS "#define NOTE_DS6   1245"
+
+.SS "#define NOTE_DS7   2489"
+
+.SS "#define NOTE_DS8   4978"
+
+.SS "#define NOTE_E1   41"
+
+.SS "#define NOTE_E2   82"
+
+.SS "#define NOTE_E3   165"
+
+.SS "#define NOTE_E4   330"
+
+.SS "#define NOTE_E5   659"
+
+.SS "#define NOTE_E6   1319"
+
+.SS "#define NOTE_E7   2637"
+
+.SS "#define NOTE_F1   44"
+
+.SS "#define NOTE_F2   87"
+
+.SS "#define NOTE_F3   175"
+
+.SS "#define NOTE_F4   349"
+
+.SS "#define NOTE_F5   698"
+
+.SS "#define NOTE_F6   1397"
+
+.SS "#define NOTE_F7   2794"
+
+.SS "#define NOTE_FS1   46"
+
+.SS "#define NOTE_FS2   93"
+
+.SS "#define NOTE_FS3   185"
+
+.SS "#define NOTE_FS4   370"
+
+.SS "#define NOTE_FS5   740"
+
+.SS "#define NOTE_FS6   1480"
+
+.SS "#define NOTE_FS7   2960"
+
+.SS "#define NOTE_G1   49"
+
+.SS "#define NOTE_G2   98"
+
+.SS "#define NOTE_G3   196"
+
+.SS "#define NOTE_G4   392"
+
+.SS "#define NOTE_G5   784"
+
+.SS "#define NOTE_G6   1568"
+
+.SS "#define NOTE_G7   3136"
+
+.SS "#define NOTE_GS1   52"
+
+.SS "#define NOTE_GS2   104"
+
+.SS "#define NOTE_GS3   208"
+
+.SS "#define NOTE_GS4   415"
+
+.SS "#define NOTE_GS5   831"
+
+.SS "#define NOTE_GS6   1661"
+
+.SS "#define NOTE_GS7   3322"
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für WFO: Arduino Informatik-Schulprojekt aus dem Quellcode\&.

@@ -1,0 +1,62 @@
+\hypertarget{classTemperaturSensor}{}\section{Temperatur\+Sensor Klassenreferenz}
+\label{classTemperaturSensor}\index{Temperatur\+Sensor@{Temperatur\+Sensor}}
+
+
+Diese Klasse ermöglicht die Verwendung des Temperatursensors. Wichtig hierbei ist, dass Pin-\/1 mit Masse (G\+ND), Pin-\/2 mit Analogeingang (A0-\/\+A5) und Pin-\/3 mit Versorgungsspannung (+5V) verbunden sind. ( Plane Schnittfläche des Halbkreis zeigt nach unten\+: Pin-\/1 rechts, Pin-\/2 mittig, Pin-\/3 links !)  
+
+
+
+
+{\ttfamily \#include $<$Temperatur\+Sensor.\+h$>$}
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTemperaturSensor_a46643cec20392314851e1353de862b5d}{Temperatur\+Sensor} (unsigned pin)
+\item 
+float \hyperlink{classTemperaturSensor_ab148d2f49fa7825006011b83c4829493}{miss\+Temperatur} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+Diese Klasse ermöglicht die Verwendung des Temperatursensors. Wichtig hierbei ist, dass Pin-\/1 mit Masse (G\+ND), Pin-\/2 mit Analogeingang (A0-\/\+A5) und Pin-\/3 mit Versorgungsspannung (+5V) verbunden sind. ( Plane Schnittfläche des Halbkreis zeigt nach unten\+: Pin-\/1 rechts, Pin-\/2 mittig, Pin-\/3 links !) 
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\index{Temperatur\+Sensor@{Temperatur\+Sensor}!Temperatur\+Sensor@{Temperatur\+Sensor}}
+\index{Temperatur\+Sensor@{Temperatur\+Sensor}!Temperatur\+Sensor@{Temperatur\+Sensor}}
+\subsubsection[{\texorpdfstring{Temperatur\+Sensor(unsigned pin)}{TemperaturSensor(unsigned pin)}}]{\setlength{\rightskip}{0pt plus 5cm}Temperatur\+Sensor\+::\+Temperatur\+Sensor (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{pin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classTemperaturSensor_a46643cec20392314851e1353de862b5d}{}\label{classTemperaturSensor_a46643cec20392314851e1353de862b5d}
+Konstruktor
+
+Erstellt ein Objekt, welches die Verwendung des Temperatursensors ermöglicht. Hierbei muss der verwendete Pin angegeben werden, wobei nur die analogen Pins A0 bis A5 verwendet werden können. 
+\begin{DoxyParams}{Parameter}
+{\em pin} & Verwendete Pin-\/\+Nummer Beispiel\+: 
+\begin{DoxyCode}
+ y
+\hyperlink{classTemperaturSensor}{TemperaturSensor} sensor( 5 );
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\index{Temperatur\+Sensor@{Temperatur\+Sensor}!miss\+Temperatur@{miss\+Temperatur}}
+\index{miss\+Temperatur@{miss\+Temperatur}!Temperatur\+Sensor@{Temperatur\+Sensor}}
+\subsubsection[{\texorpdfstring{miss\+Temperatur()}{missTemperatur()}}]{\setlength{\rightskip}{0pt plus 5cm}float Temperatur\+Sensor\+::miss\+Temperatur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classTemperaturSensor_ab148d2f49fa7825006011b83c4829493}{}\label{classTemperaturSensor_ab148d2f49fa7825006011b83c4829493}
+Ermittelt die aktuelle Temperatur in °C. Hierbei muss der Datentyp \textquotesingle{}float\textquotesingle{} einer Nicht-\/\+Ganzzahl (!) verwendet werden. Beispiel\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{float} temperatur = sensor.missTemperatur(); 
+\end{DoxyCode}
+ 
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+temperatursensor/Temperatur\+Sensor.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+.TH "FuellstandsSensor" 3 "Fre Aug 4 2017" "WFO: Arduino Informatik-Schulprojekt" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FuellstandsSensor \- Diese Klasse ermöglicht die Verwendung des Füllstandssensors\&. Wichtig hierbei ist, dass Pin '-' mit Masse (GND), Pin '+' mit Versorgungsspannung (+5V) und Pin 'S' mit Analogeingang (A0-A5) verbunden sind\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <FuellstandsSensor\&.h>\fP
+.SS "Öffentliche Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBFuellstandsSensor\fP (unsigned pin)"
+.br
+.ti -1c
+.RI "int \fBmissFuellstandRaw\fP ()"
+.br
+.ti -1c
+.RI "float \fBmissFuellstand\fP ()"
+.br
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+Diese Klasse ermöglicht die Verwendung des Füllstandssensors\&. Wichtig hierbei ist, dass Pin '-' mit Masse (GND), Pin '+' mit Versorgungsspannung (+5V) und Pin 'S' mit Analogeingang (A0-A5) verbunden sind\&. 
+.SH "Beschreibung der Konstruktoren und Destruktoren"
+.PP 
+.SS "FuellstandsSensor::FuellstandsSensor (unsigned pin)\fC [inline]\fP, \fC [explicit]\fP"
+Konstruktor
+.PP
+Erstellt ein Objekt, welches die Verwendung des Füllstandssensors ermöglicht\&.\&. Hierbei muss der verwendete Pin angegeben werden, wobei nur die analogen Pins A0 bis A5 verwendet werden können\&. 
+.PP
+\fBParameter:\fP
+.RS 4
+\fIpin\fP Verwendete Pin-Nummer Beispiel: 
+.PP
+.nf
+FuellstandsSensor sensor( 5 );
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "float FuellstandsSensor::missFuellstand ()\fC [inline]\fP"
+Ermittelt den aktuellen Füllstand in Prozent\&. Beispiel: 
+.PP
+.nf
+int temperatur = sensor\&.missFuellstand(); 
+
+.fi
+.PP
+ 
+.SS "int FuellstandsSensor::missFuellstandRaw ()\fC [inline]\fP"
+Ermittelt den aktuellen Füllstand als analogen Wert\&. Hinweis: Analoge Messwerte 1 160 25 250 50 260 75 270 100 300 Beispiel: 
+.PP
+.nf
+int temperatur = sensor\&.missFuellstandRaw(); 
+
+.fi
+.PP
+ 
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für WFO: Arduino Informatik-Schulprojekt aus dem Quellcode\&.

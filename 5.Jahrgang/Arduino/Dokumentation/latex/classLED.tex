@@ -1,0 +1,74 @@
+\hypertarget{classLED}{}\section{L\+ED Klassenreferenz}
+\label{classLED}\index{L\+ED@{L\+ED}}
+
+
+Diese Klasse ermöglicht die Verwendung von L\+E\+Ds. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in Reihe zu schalten ist. Außerdem ist es notwendig, dass das zweite Bein der \hyperlink{classLED}{L\+ED} mit Masse(\+G\+N\+D) verbunden ist.  
+
+
+
+
+{\ttfamily \#include $<$L\+E\+D.\+h$>$}
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLED_adb38dd538a49968fd6ec6a4ff7c62ff6}{L\+ED} (unsigned pin)
+\item 
+void \hyperlink{classLED_aab5c7f95602d39dd135d76d1b0c101a0}{einschalten} ()
+\item 
+void \hyperlink{classLED_a4fdba755aeac3329ca6b4f140b3e65c6}{ausschalten} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+Diese Klasse ermöglicht die Verwendung von L\+E\+Ds. Wichtig hierbei ist, dass ein 220 Ohm Widerstand in Reihe zu schalten ist. Außerdem ist es notwendig, dass das zweite Bein der \hyperlink{classLED}{L\+ED} mit Masse(\+G\+N\+D) verbunden ist. 
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\index{L\+ED@{L\+ED}!L\+ED@{L\+ED}}
+\index{L\+ED@{L\+ED}!L\+ED@{L\+ED}}
+\subsubsection[{\texorpdfstring{L\+E\+D(unsigned pin)}{LED(unsigned pin)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+E\+D\+::\+L\+ED (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{pin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classLED_adb38dd538a49968fd6ec6a4ff7c62ff6}{}\label{classLED_adb38dd538a49968fd6ec6a4ff7c62ff6}
+Konstruktor
+
+Erstellt ein Objekt, welches die Ansteuerung einer einzelnen \hyperlink{classLED}{L\+ED} ermöglicht. Hierbei muss der verwendete Pin angegeben werden. 
+\begin{DoxyParams}{Parameter}
+{\em pin} & Verwendete Pin-\/\+Nummer Beispiel\+: 
+\begin{DoxyCode}
+\hyperlink{classLED}{LED} grueneLED( 5 );
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\index{L\+ED@{L\+ED}!ausschalten@{ausschalten}}
+\index{ausschalten@{ausschalten}!L\+ED@{L\+ED}}
+\subsubsection[{\texorpdfstring{ausschalten()}{ausschalten()}}]{\setlength{\rightskip}{0pt plus 5cm}void L\+E\+D\+::ausschalten (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classLED_a4fdba755aeac3329ca6b4f140b3e65c6}{}\label{classLED_a4fdba755aeac3329ca6b4f140b3e65c6}
+Schaltet die \hyperlink{classLED}{L\+ED} aus. Beispiel\+: 
+\begin{DoxyCode}
+grueneLED.ausschalten();
+\end{DoxyCode}
+ \index{L\+ED@{L\+ED}!einschalten@{einschalten}}
+\index{einschalten@{einschalten}!L\+ED@{L\+ED}}
+\subsubsection[{\texorpdfstring{einschalten()}{einschalten()}}]{\setlength{\rightskip}{0pt plus 5cm}void L\+E\+D\+::einschalten (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classLED_aab5c7f95602d39dd135d76d1b0c101a0}{}\label{classLED_aab5c7f95602d39dd135d76d1b0c101a0}
+Schaltet die \hyperlink{classLED}{L\+ED} ein. Beispiel\+: 
+\begin{DoxyCode}
+grueneLED.einschalten();
+\end{DoxyCode}
+ 
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+led/L\+E\+D.\+h\end{DoxyCompactItemize}

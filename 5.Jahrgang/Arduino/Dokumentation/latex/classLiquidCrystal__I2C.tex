@@ -1,0 +1,138 @@
+\hypertarget{classLiquidCrystal__I2C}{}\section{Liquid\+Crystal\+\_\+\+I2C Klassenreferenz}
+\label{classLiquidCrystal__I2C}\index{Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}}
+
+
+{\ttfamily \#include $<$Liquid\+Crystal\+\_\+\+I2\+C.\+h$>$}
+
+Klassendiagramm für Liquid\+Crystal\+\_\+\+I2C\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classLiquidCrystal__I2C}
+\end{center}
+\end{figure}
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLiquidCrystal__I2C_a52ea9b51b4adaddbf05760ff595ffcc2}{Liquid\+Crystal\+\_\+\+I2C} (uint8\+\_\+t lcd\+\_\+addr, uint8\+\_\+t lcd\+\_\+cols, uint8\+\_\+t lcd\+\_\+rows, uint8\+\_\+t charsize=L\+C\+D\+\_\+5x8\+D\+O\+TS)
+\item 
+void \hyperlink{classLiquidCrystal__I2C_a62235d63b74abf26160d7cfe67a9687e}{begin} ()
+\item 
+void \hyperlink{classLiquidCrystal__I2C_ab47996231da6feeebcebf0e6e34756a9}{clear} ()
+\item 
+void \hyperlink{classLiquidCrystal__I2C_a9b8edf82c5835c9b6caac98b5a0ed464}{home} ()
+\item 
+void \hyperlink{classLiquidCrystal__I2C_af89d6facccc156d7f151da71ecdd3b70}{no\+Display} ()
+\item 
+void \hyperlink{classLiquidCrystal__I2C_a5fa41920b5cebf1960b15582a957eb93}{display} ()
+\item 
+void \hyperlink{classLiquidCrystal__I2C_a89ba791c60f6100eb565bc6099e56bb1}{no\+Blink} ()
+\item 
+void \hyperlink{classLiquidCrystal__I2C_a604ade489e878ec757a05dab4586c3a9}{blink} ()
+\item 
+void \hyperlink{classLiquidCrystal__I2C_a35a18278aa45bd91f2772924a50b7120}{no\+Cursor} ()
+\item 
+void \hyperlink{classLiquidCrystal__I2C_a4ea81707534586397b00c39b1ab236bf}{cursor} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+This is the driver for the Liquid Crystal L\+CD displays that use the I2C bus.
+
+After creating an instance of this class, first call \hyperlink{classLiquidCrystal__I2C_a62235d63b74abf26160d7cfe67a9687e}{begin()} before anything else. The backlight is on by default, since that is the most likely operating mode in most cases. 
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\index{Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}!Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}}
+\index{Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}!Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}}
+\subsubsection[{\texorpdfstring{Liquid\+Crystal\+\_\+\+I2\+C(uint8\+\_\+t lcd\+\_\+addr, uint8\+\_\+t lcd\+\_\+cols, uint8\+\_\+t lcd\+\_\+rows, uint8\+\_\+t charsize=\+L\+C\+D\+\_\+5x8\+D\+O\+T\+S)}{LiquidCrystal\_I2C(uint8\_t lcd\_addr, uint8\_t lcd\_cols, uint8\_t lcd\_rows, uint8\_t charsize=LCD\_5x8DOTS)}}]{\setlength{\rightskip}{0pt plus 5cm}Liquid\+Crystal\+\_\+\+I2\+C\+::\+Liquid\+Crystal\+\_\+\+I2C (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{lcd\+\_\+addr, }
+\item[{uint8\+\_\+t}]{lcd\+\_\+cols, }
+\item[{uint8\+\_\+t}]{lcd\+\_\+rows, }
+\item[{uint8\+\_\+t}]{charsize = {\ttfamily LCD\+\_\+5x8DOTS}}
+\end{DoxyParamCaption}
+)}\hypertarget{classLiquidCrystal__I2C_a52ea9b51b4adaddbf05760ff595ffcc2}{}\label{classLiquidCrystal__I2C_a52ea9b51b4adaddbf05760ff595ffcc2}
+Constructor
+
+
+\begin{DoxyParams}{Parameter}
+{\em lcd\+\_\+addr} & I2C slave address of the L\+CD display. Most likely printed on the L\+CD circuit board, or look in the supplied L\+CD documentation. \\
+\hline
+{\em lcd\+\_\+cols} & Number of columns your L\+CD display has. \\
+\hline
+{\em lcd\+\_\+rows} & Number of rows your L\+CD display has. \\
+\hline
+{\em charsize} & The size in dots that the display has, use L\+C\+D\+\_\+5x10\+D\+O\+TS or L\+C\+D\+\_\+5x8\+D\+O\+TS. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\index{Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}!begin@{begin}}
+\index{begin@{begin}!Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}}
+\subsubsection[{\texorpdfstring{begin()}{begin()}}]{\setlength{\rightskip}{0pt plus 5cm}void Liquid\+Crystal\+\_\+\+I2\+C\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLiquidCrystal__I2C_a62235d63b74abf26160d7cfe67a9687e}{}\label{classLiquidCrystal__I2C_a62235d63b74abf26160d7cfe67a9687e}
+Set the L\+CD display in the correct begin state, must be called before anything else is done. \index{Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}!blink@{blink}}
+\index{blink@{blink}!Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}}
+\subsubsection[{\texorpdfstring{blink()}{blink()}}]{\setlength{\rightskip}{0pt plus 5cm}void Liquid\+Crystal\+\_\+\+I2\+C\+::blink (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLiquidCrystal__I2C_a604ade489e878ec757a05dab4586c3a9}{}\label{classLiquidCrystal__I2C_a604ade489e878ec757a05dab4586c3a9}
+Start blinking the cursor indicator. \index{Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}!clear@{clear}}
+\index{clear@{clear}!Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}}
+\subsubsection[{\texorpdfstring{clear()}{clear()}}]{\setlength{\rightskip}{0pt plus 5cm}void Liquid\+Crystal\+\_\+\+I2\+C\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLiquidCrystal__I2C_ab47996231da6feeebcebf0e6e34756a9}{}\label{classLiquidCrystal__I2C_ab47996231da6feeebcebf0e6e34756a9}
+Remove all the characters currently shown. Next print/write operation will start from the first position on L\+CD display. \index{Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}!cursor@{cursor}}
+\index{cursor@{cursor}!Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}}
+\subsubsection[{\texorpdfstring{cursor()}{cursor()}}]{\setlength{\rightskip}{0pt plus 5cm}void Liquid\+Crystal\+\_\+\+I2\+C\+::cursor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLiquidCrystal__I2C_a4ea81707534586397b00c39b1ab236bf}{}\label{classLiquidCrystal__I2C_a4ea81707534586397b00c39b1ab236bf}
+Show a cursor indicator, cursor can blink on not blink. Use the methods \hyperlink{classLiquidCrystal__I2C_a604ade489e878ec757a05dab4586c3a9}{blink()} and \hyperlink{classLiquidCrystal__I2C_a89ba791c60f6100eb565bc6099e56bb1}{no\+Blink()} for changing cursor blink. \index{Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}!display@{display}}
+\index{display@{display}!Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}}
+\subsubsection[{\texorpdfstring{display()}{display()}}]{\setlength{\rightskip}{0pt plus 5cm}void Liquid\+Crystal\+\_\+\+I2\+C\+::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLiquidCrystal__I2C_a5fa41920b5cebf1960b15582a957eb93}{}\label{classLiquidCrystal__I2C_a5fa41920b5cebf1960b15582a957eb93}
+Show the characters on the L\+CD display, this is the normal behaviour. This method should only be used after \hyperlink{classLiquidCrystal__I2C_af89d6facccc156d7f151da71ecdd3b70}{no\+Display()} has been used. \index{Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}!home@{home}}
+\index{home@{home}!Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}}
+\subsubsection[{\texorpdfstring{home()}{home()}}]{\setlength{\rightskip}{0pt plus 5cm}void Liquid\+Crystal\+\_\+\+I2\+C\+::home (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLiquidCrystal__I2C_a9b8edf82c5835c9b6caac98b5a0ed464}{}\label{classLiquidCrystal__I2C_a9b8edf82c5835c9b6caac98b5a0ed464}
+Next print/write operation will will start from the first position on the L\+CD display. \index{Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}!no\+Blink@{no\+Blink}}
+\index{no\+Blink@{no\+Blink}!Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}}
+\subsubsection[{\texorpdfstring{no\+Blink()}{noBlink()}}]{\setlength{\rightskip}{0pt plus 5cm}void Liquid\+Crystal\+\_\+\+I2\+C\+::no\+Blink (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLiquidCrystal__I2C_a89ba791c60f6100eb565bc6099e56bb1}{}\label{classLiquidCrystal__I2C_a89ba791c60f6100eb565bc6099e56bb1}
+Do not blink the cursor indicator. \index{Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}!no\+Cursor@{no\+Cursor}}
+\index{no\+Cursor@{no\+Cursor}!Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}}
+\subsubsection[{\texorpdfstring{no\+Cursor()}{noCursor()}}]{\setlength{\rightskip}{0pt plus 5cm}void Liquid\+Crystal\+\_\+\+I2\+C\+::no\+Cursor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLiquidCrystal__I2C_a35a18278aa45bd91f2772924a50b7120}{}\label{classLiquidCrystal__I2C_a35a18278aa45bd91f2772924a50b7120}
+Do not show a cursor indicator. \index{Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}!no\+Display@{no\+Display}}
+\index{no\+Display@{no\+Display}!Liquid\+Crystal\+\_\+\+I2C@{Liquid\+Crystal\+\_\+\+I2C}}
+\subsubsection[{\texorpdfstring{no\+Display()}{noDisplay()}}]{\setlength{\rightskip}{0pt plus 5cm}void Liquid\+Crystal\+\_\+\+I2\+C\+::no\+Display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLiquidCrystal__I2C_af89d6facccc156d7f151da71ecdd3b70}{}\label{classLiquidCrystal__I2C_af89d6facccc156d7f151da71ecdd3b70}
+Do not show any characters on the L\+CD display. Backlight state will remain unchanged. Also all characters written on the display will return, when the display in enabled again. 
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+display/Liquid\+Crystal\+\_\+\+I2\+C.\+h\item 
+display/Liquid\+Crystal\+\_\+\+I2\+C.\+cpp\end{DoxyCompactItemize}

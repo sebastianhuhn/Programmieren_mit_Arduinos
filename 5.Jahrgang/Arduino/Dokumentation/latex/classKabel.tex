@@ -1,0 +1,78 @@
+\hypertarget{classKabel}{}\section{Kabel Klassenreferenz}
+\label{classKabel}\index{Kabel@{Kabel}}
+
+
+Diese Klasse ermöglicht die Verwendung von Kabeln. Außerdem ist es notwendig, dass eine Seite des Kabels mit Masse(\+G\+N\+D) verbunden ist.  
+
+
+
+
+{\ttfamily \#include $<$Kabel.\+h$>$}
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classKabel_a7a64c97ea252de29785d55e21cfbe1c9}{Kabel} (unsigned pin)
+\item 
+bool \hyperlink{classKabel_ab7c7c5a852ef3aca5608363ce722935d}{schaltkreis\+Geschlossen} ()
+\item 
+bool \hyperlink{classKabel_a0f963806871013c34de5da699d71fe1c}{schaltkreis\+Geoeffnet} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+Diese Klasse ermöglicht die Verwendung von Kabeln. Außerdem ist es notwendig, dass eine Seite des Kabels mit Masse(\+G\+N\+D) verbunden ist. 
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\index{Kabel@{Kabel}!Kabel@{Kabel}}
+\index{Kabel@{Kabel}!Kabel@{Kabel}}
+\subsubsection[{\texorpdfstring{Kabel(unsigned pin)}{Kabel(unsigned pin)}}]{\setlength{\rightskip}{0pt plus 5cm}Kabel\+::\+Kabel (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{pin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classKabel_a7a64c97ea252de29785d55e21cfbe1c9}{}\label{classKabel_a7a64c97ea252de29785d55e21cfbe1c9}
+Konstruktor
+
+Erstellt ein Objekt, welches die Ansteuerung einer einzelnen K\+A\+B\+EL ermöglicht. Hierbei muss der verwendete Pin angegeben werden. 
+\begin{DoxyParams}{Parameter}
+{\em pin} & Verwendete Pin-\/\+Nummer Beispiel\+: 
+\begin{DoxyCode}
+\hyperlink{classKabel}{Kabel} bruecke( 5 );
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\index{Kabel@{Kabel}!schaltkreis\+Geoeffnet@{schaltkreis\+Geoeffnet}}
+\index{schaltkreis\+Geoeffnet@{schaltkreis\+Geoeffnet}!Kabel@{Kabel}}
+\subsubsection[{\texorpdfstring{schaltkreis\+Geoeffnet()}{schaltkreisGeoeffnet()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Kabel\+::schaltkreis\+Geoeffnet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classKabel_a0f963806871013c34de5da699d71fe1c}{}\label{classKabel_a0f963806871013c34de5da699d71fe1c}
+Gibt den Zustand des Kabels zurück, ob Schaltkreis geöffnet ist. Beispiel\+: 
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}( bruecke.schaltkreisGeoeffnet() )\{
+\textcolor{comment}{// }
+\}
+\end{DoxyCode}
+ \index{Kabel@{Kabel}!schaltkreis\+Geschlossen@{schaltkreis\+Geschlossen}}
+\index{schaltkreis\+Geschlossen@{schaltkreis\+Geschlossen}!Kabel@{Kabel}}
+\subsubsection[{\texorpdfstring{schaltkreis\+Geschlossen()}{schaltkreisGeschlossen()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Kabel\+::schaltkreis\+Geschlossen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classKabel_ab7c7c5a852ef3aca5608363ce722935d}{}\label{classKabel_ab7c7c5a852ef3aca5608363ce722935d}
+Gibt den Zustand des Kabels zurück, ob der Schaltkreis geschlossen ist. Beispiel\+: 
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}( bruecke.schaltkreisGeschlossen() )\{
+\textcolor{comment}{// }
+\}
+\end{DoxyCode}
+ 
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+kabel/Kabel.\+h\end{DoxyCompactItemize}

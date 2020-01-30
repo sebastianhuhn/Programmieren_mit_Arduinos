@@ -1,0 +1,75 @@
+.TH "Kabel" 3 "Fre Aug 4 2017" "WFO: Arduino Informatik-Schulprojekt" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Kabel \- Diese Klasse ermöglicht die Verwendung von Kabeln\&. Außerdem ist es notwendig, dass eine Seite des Kabels mit Masse(GND) verbunden ist\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Kabel\&.h>\fP
+.SS "Öffentliche Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBKabel\fP (unsigned pin)"
+.br
+.ti -1c
+.RI "bool \fBschaltkreisGeschlossen\fP ()"
+.br
+.ti -1c
+.RI "bool \fBschaltkreisGeoeffnet\fP ()"
+.br
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+Diese Klasse ermöglicht die Verwendung von Kabeln\&. Außerdem ist es notwendig, dass eine Seite des Kabels mit Masse(GND) verbunden ist\&. 
+.SH "Beschreibung der Konstruktoren und Destruktoren"
+.PP 
+.SS "Kabel::Kabel (unsigned pin)\fC [inline]\fP, \fC [explicit]\fP"
+Konstruktor
+.PP
+Erstellt ein Objekt, welches die Ansteuerung einer einzelnen KABEL ermöglicht\&. Hierbei muss der verwendete Pin angegeben werden\&. 
+.PP
+\fBParameter:\fP
+.RS 4
+\fIpin\fP Verwendete Pin-Nummer Beispiel: 
+.PP
+.nf
+Kabel bruecke( 5 );
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "bool Kabel::schaltkreisGeoeffnet ()\fC [inline]\fP"
+Gibt den Zustand des Kabels zurück, ob Schaltkreis geöffnet ist\&. Beispiel: 
+.PP
+.nf
+if( bruecke\&.schaltkreisGeoeffnet() ){
+// 
+}
+
+.fi
+.PP
+ 
+.SS "bool Kabel::schaltkreisGeschlossen ()\fC [inline]\fP"
+Gibt den Zustand des Kabels zurück, ob der Schaltkreis geschlossen ist\&. Beispiel: 
+.PP
+.nf
+if( bruecke\&.schaltkreisGeschlossen() ){
+// 
+}
+
+.fi
+.PP
+ 
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für WFO: Arduino Informatik-Schulprojekt aus dem Quellcode\&.

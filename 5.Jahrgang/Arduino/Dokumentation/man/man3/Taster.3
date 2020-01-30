@@ -1,0 +1,95 @@
+.TH "Taster" 3 "Fre Aug 4 2017" "WFO: Arduino Informatik-Schulprojekt" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Taster \- Diese Klasse ermöglicht die Verwendung von Tastern\&. Wichtig hierbei ist, dass das Schalten gegen Masse (GND) erfolgt\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Taster\&.h>\fP
+.SS "Öffentliche Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBTaster\fP (unsigned pin)"
+.br
+.ti -1c
+.RI "bool \fBwurdeGedrueckt\fP ()"
+.br
+.ti -1c
+.RI "void \fBloescheMarkierung\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetzeAktion\fP (void(*funktion)(void))"
+.br
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+Diese Klasse ermöglicht die Verwendung von Tastern\&. Wichtig hierbei ist, dass das Schalten gegen Masse (GND) erfolgt\&. 
+.SH "Beschreibung der Konstruktoren und Destruktoren"
+.PP 
+.SS "Taster::Taster (unsigned pin)\fC [inline]\fP, \fC [explicit]\fP"
+Konstruktor
+.PP
+Erstellt ein Objekt, welches die Verwendung eines Tasters ermöglicht\&. Hierbei muss der verwendete Pin angegeben werden\&. 
+.PP
+\fBParameter:\fP
+.RS 4
+\fIpin\fP Verwendete Pin-Nummer Beispiel: 
+.PP
+.nf
+Taster meinTaster( 5 );
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "void Taster::loescheMarkierung ()\fC [inline]\fP"
+Entfernt die Markierung, dass der \fBTaster\fP gedrückt wurde\&.
+.PP
+.PP
+.nf
+meinTaster\&.loescheMarkierung()
+.fi
+.PP
+ 
+.SS "void Taster::setzeAktion (void(*)(void) funktion)\fC [inline]\fP"
+Setz eine Funktion, die bei Druck des Tasters ausgeführt wird\&. Beispiel: 
+.PP
+.nf
+void meineAktion(){
+ // Mache irgendwas 
+}
+meinTaster\&.setzeAktion( meineAktion );
+
+.fi
+.PP
+ 
+.SS "bool Taster::wurdeGedrueckt ()\fC [inline]\fP"
+Überprüft, ob der \fBTaster\fP gedrückt wurde\&. 
+.PP
+\fBRückgabe:\fP
+.RS 4
+wahr falls gedrückt, sonst falsch 
+.PP
+.nf
+if( meinTaster\&.wurdeGedrueckt() ){
+// Mache irgendwas
+}
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für WFO: Arduino Informatik-Schulprojekt aus dem Quellcode\&.

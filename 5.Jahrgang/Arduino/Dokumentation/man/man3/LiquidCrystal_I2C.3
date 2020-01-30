@@ -1,0 +1,94 @@
+.TH "LiquidCrystal_I2C" 3 "Die Apr 4 2017" "WFO: Arduino Informatik-Schulprojekt" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LiquidCrystal_I2C \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LiquidCrystal_I2C\&.h>\fP
+.PP
+Abgeleitet von Print\&.
+.PP
+Basisklasse für \fBDisplay\fP\fC [protected]\fP\&.
+.SS "Öffentliche Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBLiquidCrystal_I2C\fP (uint8_t lcd_addr, uint8_t lcd_cols, uint8_t lcd_rows, uint8_t charsize=LCD_5x8DOTS)"
+.br
+.ti -1c
+.RI "void \fBbegin\fP ()"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "void \fBhome\fP ()"
+.br
+.ti -1c
+.RI "void \fBnoDisplay\fP ()"
+.br
+.ti -1c
+.RI "void \fBdisplay\fP ()"
+.br
+.ti -1c
+.RI "void \fBnoBlink\fP ()"
+.br
+.ti -1c
+.RI "void \fBblink\fP ()"
+.br
+.ti -1c
+.RI "void \fBnoCursor\fP ()"
+.br
+.ti -1c
+.RI "void \fBcursor\fP ()"
+.br
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+This is the driver for the Liquid Crystal LCD displays that use the I2C bus\&.
+.PP
+After creating an instance of this class, first call \fBbegin()\fP before anything else\&. The backlight is on by default, since that is the most likely operating mode in most cases\&. 
+.SH "Beschreibung der Konstruktoren und Destruktoren"
+.PP 
+.SS "LiquidCrystal_I2C::LiquidCrystal_I2C (uint8_t lcd_addr, uint8_t lcd_cols, uint8_t lcd_rows, uint8_t charsize = \fCLCD_5x8DOTS\fP)"
+Constructor
+.PP
+\fBParameter:\fP
+.RS 4
+\fIlcd_addr\fP I2C slave address of the LCD display\&. Most likely printed on the LCD circuit board, or look in the supplied LCD documentation\&. 
+.br
+\fIlcd_cols\fP Number of columns your LCD display has\&. 
+.br
+\fIlcd_rows\fP Number of rows your LCD display has\&. 
+.br
+\fIcharsize\fP The size in dots that the display has, use LCD_5x10DOTS or LCD_5x8DOTS\&. 
+.RE
+.PP
+
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "void LiquidCrystal_I2C::begin ()"
+Set the LCD display in the correct begin state, must be called before anything else is done\&. 
+.SS "void LiquidCrystal_I2C::blink ()"
+Start blinking the cursor indicator\&. 
+.SS "void LiquidCrystal_I2C::clear ()"
+Remove all the characters currently shown\&. Next print/write operation will start from the first position on LCD display\&. 
+.SS "void LiquidCrystal_I2C::cursor ()"
+Show a cursor indicator, cursor can blink on not blink\&. Use the methods \fBblink()\fP and \fBnoBlink()\fP for changing cursor blink\&. 
+.SS "void LiquidCrystal_I2C::display ()"
+Show the characters on the LCD display, this is the normal behaviour\&. This method should only be used after \fBnoDisplay()\fP has been used\&. 
+.SS "void LiquidCrystal_I2C::home ()"
+Next print/write operation will will start from the first position on the LCD display\&. 
+.SS "void LiquidCrystal_I2C::noBlink ()"
+Do not blink the cursor indicator\&. 
+.SS "void LiquidCrystal_I2C::noCursor ()"
+Do not show a cursor indicator\&. 
+.SS "void LiquidCrystal_I2C::noDisplay ()"
+Do not show any characters on the LCD display\&. Backlight state will remain unchanged\&. Also all characters written on the display will return, when the display in enabled again\&. 
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für WFO: Arduino Informatik-Schulprojekt aus dem Quellcode\&.

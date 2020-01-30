@@ -1,0 +1,90 @@
+.TH "AudioSensor" 3 "Fre Aug 4 2017" "WFO: Arduino Informatik-Schulprojekt" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AudioSensor \- Diese Klasse ermöglicht die Verwendung des Audiosensor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AudioSensor\&.h>\fP
+.SS "Öffentliche Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBAudioSensor\fP (unsigned dig_pin, unsigned ana_pin=0)"
+.br
+.ti -1c
+.RI "bool \fBlaut\fP ()"
+.br
+.ti -1c
+.RI "void \fBeinschalten\fP ()"
+.br
+.ti -1c
+.RI "void \fBausschalten\fP ()"
+.br
+.ti -1c
+.RI "int \fBmissLautstaerke\fP ()"
+.br
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+Diese Klasse ermöglicht die Verwendung des Audiosensor\&. 
+.SH "Beschreibung der Konstruktoren und Destruktoren"
+.PP 
+.SS "AudioSensor::AudioSensor (unsigned dig_pin, unsigned ana_pin = \fC0\fP)\fC [inline]\fP, \fC [explicit]\fP"
+Konstruktor
+.PP
+Erstellt ein Objekt, welches zur Abfrage des Audiosensor dient\&. Beispiel: 
+.PP
+.nf
+AudioSensor sensor;
+
+.fi
+.PP
+ 
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "void AudioSensor::ausschalten ()\fC [inline]\fP"
+Schaltet den Sensor aus\&. Beispiel: 
+.PP
+.nf
+sensor\&.ausschalten();
+
+.fi
+.PP
+ 
+.SS "void AudioSensor::einschalten ()\fC [inline]\fP"
+Schaltet den Sensor ein\&. Beispiel: 
+.PP
+.nf
+sensor\&.einschalten();
+
+.fi
+.PP
+ 
+.SS "bool AudioSensor::laut ()\fC [inline]\fP"
+Prüft, ob die aktuelle Lautstärke den Grenzwert überschritten wurde\&. Der Grenzwert wurde mit der 'Einstellschraube' justiert\&. Beispiel: 
+.PP
+.nf
+if( sensor\&.laut() ){
+ // mach irgendwas
+}
+
+.fi
+.PP
+ 
+.SS "int AudioSensor::missLautstaerke ()\fC [inline]\fP"
+Der Grenzwert wurde mit der 'Einstellschraube' justiert\&. Beispiel: 
+.PP
+.nf
+int lautstaerke = sensor\&.missLautstaerke();
+
+.fi
+.PP
+ 
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für WFO: Arduino Informatik-Schulprojekt aus dem Quellcode\&.

@@ -1,0 +1,61 @@
+.TH "Lautsprecher" 3 "Fre Aug 4 2017" "WFO: Arduino Informatik-Schulprojekt" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Lautsprecher \- Diese Klasse ermöglicht die Verwendung des Lautsprechers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Lautsprecher\&.h>\fP
+.SS "Öffentliche Methoden"
+
+.in +1c
+.ti -1c
+.RI "\fBLautsprecher\fP (unsigned pin)"
+.br
+.ti -1c
+.RI "void \fBspieleTon\fP (int frequenz, int dauer=1000)"
+.br
+.in -1c
+.SH "Ausführliche Beschreibung"
+.PP 
+Diese Klasse ermöglicht die Verwendung des Lautsprechers\&. 
+.SH "Beschreibung der Konstruktoren und Destruktoren"
+.PP 
+.SS "Lautsprecher::Lautsprecher (unsigned pin)\fC [inline]\fP, \fC [explicit]\fP"
+Konstruktor
+.PP
+Erstellt ein Objekt, welches zur Ansteuerung des Lautsprechers dient\&. Beispiel: 
+.PP
+.nf
+Lautsprecher lautsprecher;
+
+.fi
+.PP
+ 
+.SH "Dokumentation der Elementfunktionen"
+.PP 
+.SS "void Lautsprecher::spieleTon (int frequenz, int dauer = \fC1000\fP)\fC [inline]\fP"
+Spielt einen Ton über den \fBLautsprecher\fP\&. Beispiel: 
+.PP
+\fBParameter:\fP
+.RS 4
+\fIfrequenz\fP Frequenzhöhe des Tons 
+.br
+\fIdauer\fP Länge des Tons in Millisekunden (optional) 
+.PP
+.nf
+lautsprecher\&.spieleTon( NOTE_D8, 1000);
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+
+.SH "Autor"
+.PP 
+Automatisch erzeugt von Doxygen für WFO: Arduino Informatik-Schulprojekt aus dem Quellcode\&.

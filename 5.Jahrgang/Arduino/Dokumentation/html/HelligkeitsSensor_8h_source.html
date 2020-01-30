@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>WFO: Arduino Informatik-Schulprojekt: helligkeitssensor/HelligkeitsSensor.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">WFO: Arduino Informatik-Schulprojekt
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.11 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b45d20c8ab9b8d8e35d40067a34d545a.html">helligkeitssensor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">HelligkeitsSensor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef HELLIGKEITSSENSOR_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define HELLIGKEITSSENSOR_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classHelligkeitsSensor.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classHelligkeitsSensor.html">HelligkeitsSensor</a> {</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classHelligkeitsSensor.html#a4154c5c9a77f4035b94602252f573f41">   23</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classHelligkeitsSensor.html#a4154c5c9a77f4035b94602252f573f41">HelligkeitsSensor</a>( <span class="keywordtype">unsigned</span> pin ) </div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        : m_pin(pin) { </div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classHelligkeitsSensor.html#adabf39eb12ed5b5be57c8d3a382cf99b">   35</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classHelligkeitsSensor.html#adabf39eb12ed5b5be57c8d3a382cf99b">missHelligkeitRaw</a>(){</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> analogRead( m_pin );</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classHelligkeitsSensor.html#ad69b97f09e9b4ff9597ede2670c08f2c">   46</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="classHelligkeitsSensor.html#ad69b97f09e9b4ff9597ede2670c08f2c">missHelligkeit</a>(){</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> ( <a class="code" href="classHelligkeitsSensor.html#adabf39eb12ed5b5be57c8d3a382cf99b">missHelligkeitRaw</a>() / 10.24 );</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">unsigned</span> m_pin;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif // HELLIGKEITSSENSOR_H</span></div><div class="ttc" id="classHelligkeitsSensor_html_ad69b97f09e9b4ff9597ede2670c08f2c"><div class="ttname"><a href="classHelligkeitsSensor.html#ad69b97f09e9b4ff9597ede2670c08f2c">HelligkeitsSensor::missHelligkeit</a></div><div class="ttdeci">float missHelligkeit()</div><div class="ttdef"><b>Definition:</b> HelligkeitsSensor.h:46</div></div>
+<div class="ttc" id="classHelligkeitsSensor_html_adabf39eb12ed5b5be57c8d3a382cf99b"><div class="ttname"><a href="classHelligkeitsSensor.html#adabf39eb12ed5b5be57c8d3a382cf99b">HelligkeitsSensor::missHelligkeitRaw</a></div><div class="ttdeci">int missHelligkeitRaw()</div><div class="ttdef"><b>Definition:</b> HelligkeitsSensor.h:35</div></div>
+<div class="ttc" id="classHelligkeitsSensor_html_a4154c5c9a77f4035b94602252f573f41"><div class="ttname"><a href="classHelligkeitsSensor.html#a4154c5c9a77f4035b94602252f573f41">HelligkeitsSensor::HelligkeitsSensor</a></div><div class="ttdeci">HelligkeitsSensor(unsigned pin)</div><div class="ttdef"><b>Definition:</b> HelligkeitsSensor.h:23</div></div>
+<div class="ttc" id="classHelligkeitsSensor_html"><div class="ttname"><a href="classHelligkeitsSensor.html">HelligkeitsSensor</a></div><div class="ttdoc">Diese Klasse ermöglicht die Verwendung des Helligkeitssensors. Wichtig hierbei ist, dass ein Pin A &quot;+&quot; mit Versorgungsspannung (+5V) und der andere Pin B mit einem Analogeingang (A0-A5) verbunden sind. Zusätzlich muss Pin B mit einem 10K Ohm Widerstand mit Masse (-) verbunden sein. </div><div class="ttdef"><b>Definition:</b> HelligkeitsSensor.h:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
